@@ -6,8 +6,13 @@ layout: compress
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This site is about software development and algorithmic trading on linux and macos.">
+    {% if page.url == "/index.html" %}
+    <meta name="description" content="This blog is about software development and algorithmic trading on linux and macos.">
     <meta name="keywords" content="algorithmic trading, software development, arne gockeln">
+    {% else %}
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
     <meta name="author" content="Arne Gockeln">
     <title>Arne Gockeln | {% if page.title.size > 0 %}{{ page.title }}{% else %}Software Developer & Algorithmic Trader{% endif %}</title>
     <!-- FAV and TOUCH ICONS -->
@@ -20,9 +25,6 @@ layout: compress
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/fonts/fontello/css/fontello.css">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.magnific-popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.fluidbox/fluidbox.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/selection-sharer/selection-sharer.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/rotate-words.css">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/align.css">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/shortcodes/shortcodes.css">
@@ -158,16 +160,10 @@ layout: compress
     <script src="{{ site.url }}/assets/js/fastclick.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.fitvids.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.viewport.mini.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.waypoints.min.js"></script>    
-    <script src="{{ site.url }}/assets/js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.waypoints.min.js"></script>
     <script src="{{ site.url }}/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.isotope.min.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.fluidbox/jquery.fluidbox.min.js"></script>
-    <script src="{{ site.url }}/assets/js/owl-carousel/owl.carousel.min.js"></script>
-    <script src="{{ site.url }}/assets/js/selection-sharer/selection-sharer.js"></script>
-    <script src="{{ site.url }}/assets/js/socialstream.jquery.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.collagePlus/jquery.collagePlus.min.js"></script>
     <script src="{{ site.url }}/assets/js/main.js"></script>
     <script src="{{ site.url }}/assets/js/shortcodes/shortcodes.js"></script>
     <script src="{{ site.url }}/assets/js/highlight.pack.js"></script>

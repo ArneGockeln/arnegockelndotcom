@@ -51,7 +51,7 @@ $ cd blogimg
 $ open -a ImageOptim .
 ```
 
-[![ImageOptim]({{ site.url }}/blogimg/201710/imageoptim.png)]({{ site.url }}/blogimg/201710/imageoptim.png){:class="fancybox"}
+[![ImageOptim]({{ site.url }}/assets/images/algodevteaser.jpg)]({{ site.url }}/assets/images/algodevteaser.jpg){:class="fancybox"}
 
 Die Bilder werden jetzt komprimiert und direkt im Verzeichnis mit dem optimierten Bild ersetzt. Je nachdem wie viele Bilder es sind, dauert dies eine Weile. Deswegen kann das Programm im Hintergrund arbeiten, und wir gehen weiter zum Minifizieren von HTML, CSS und JS.
 

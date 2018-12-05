@@ -278,26 +278,7 @@
 				}
         });
         // ------------------------------
-		
-		
-		// ------------------------------
-		// GALLERY COLLAGE LAYOUT
-		collage();
-		
-		var resizeTimer = null;
-		$(window).bind('resize', function() {
-			
-			// hide all the images until we resize them
-			// set the element you are scaling i.e. the first child nodes of ```.Collage``` to opacity 0
-			$('.gallery figure').css("opacity", 0);
-			// set a timer to re-apply the plugin
-			if (resizeTimer) clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(collage, 1200);
-			collage();
-		});
-		// ------------------------------
-		
-		
+				
 		// ------------------------------
 		// LIGHTBOX - applied to gallery post format
 		if($(".lightbox, .gallery.link-to-file").length) {
@@ -370,56 +351,6 @@
 			});	
 		}
 		// ------------------------------
-		
-		
-		
-		
-		
-		// ------------------------------
-        // OWL-CAROUSEL
-		var owl = $('.owl-carousel');
-		if(owl.length) {
-			owl.each(function(index, element) {
-				//wait for images
-				$(element).imagesLoaded( function() {
-					
-					//remove loading
-					$(element).find('.loading').remove();
-					
-					var items = $(element).data('items');
-					if (items === 1) {
-						$(element).addClass('single-slide');
-						}
-					else if (items === 2) {
-						$(element).addClass('two-slides');
-						}
-					$(element).owlCarousel({
-						loop: 				$(element).data('loop'),
-						center : 			$(element).data('center'),
-						mouseDrag : 		$(element).data('mouse-drag'),
-						dots : 				$(element).data('dots'),
-						nav : 				$(element).data('nav'),
-						autoplay : 			$(element).data('autoplay'),
-						autoplaySpeed : 	$(element).data('autoplay-speed'),
-						autoplayTimeout : 	$(element).data('autoplay-timeout'),
-						autoplayHoverPause :true,
-						navText : [],
-						autoHeight: $(element).hasClass('post-slider') ? false : true,
-						responsive:{
-							0:		{ items: 1 },
-							768:	{ items: items <= 2 ? items : 2 },
-							1200:	{ items: items <= 3 ? items : 3 },
-							1600:	{ items: items }
-						},
-						onInitialized : animate_blog
-					});
-				});
-			});	
-		}
-		// ------------------------------
-
-
-		
 		
 		// ------------------------------
         // FIXED NAV MENU	
@@ -517,96 +448,11 @@
             $('html').toggleClass('is-menu-toggled-on');
         });
 		// ------------------------------
-
-	
-        
-        
-		// ------------------------------
-		// SOCIAL FEED WIDGET
-		// https://github.com/pixel-industry/Social-Photo-Stream-jQuery-Plugin
-		var socialFeed = $('.social-feed');
-		if(socialFeed.length) {
-			socialFeed.each(function() {
-				$(this).socialstream({
-					socialnetwork: $(this).data("social-network"),
-					limit: $(this).data("limit"),
-					username: $(this).data("username")
-				});
-			});	
-		}
-		// ------------------------------
-		
-		
-		
-		
-        // ------------------------------
-		// Selection Sharer
-		if($('.is-selection-shareable').length) {	
-			$('.single-post .entry-content p, .single-post .entry-content blockquote').selectionSharer();
-		} 
-        // ------------------------------
-        
-		
-
 		
 		// ------------------------------
 		// remove click delay on touch devices
 		FastClick.attach(document.body);
-		// ------------------------------
-		
-	
-		
-		
-		// ------------------------------
-		// FORM VALIDATION
-		// comment form validation fix
-		$('#commentform, .mc4wp-form form').addClass('validate-form');
-		$('#commentform').find('input,textarea').each(function(index, element) {
-            if($(this).attr('aria-required') === "true") {
-				$(this).addClass('required');
-			}
-			if($(this).attr('name') == "email") {
-				$(this).addClass('email');
-			}
-		});
-		
-		// validate form
-		if($('.validate-form').length) {
-			$('.validate-form').each(function() {
-					$(this).validate();
-				});
-		}
-		// ------------------------------
-		
-
-
-		
-		// ------------------------------
-		// MASONRY - ISOTOPE
-		$masonry_container = $('.masonry');
-		if($masonry_container.length) {
-			$masonry_container.imagesLoaded(function() {
-				$masonry_container.width($masonry_container.parent().width());
-				// initialize isotope
-				$masonry_container.isotope({
-				  itemSelector : '.hentry',
-				  layoutMode : $masonry_container.data('layout'),
-				  transitionDuration: 0
-				});
-				
-				setMasonry();
-				setTimeout(function() { $masonry_container.isotope(); }, 20);	
-				$(window).resize(function() {
-					// hack : make container width fixed
-					$masonry_container.width($masonry_container.parent().width());
-					setMasonry();					
-				});
-			});
-		}
-		// ------------------------------
-		
-		
-		
+		// ------------------------------		
 		
     });
     // DOCUMENT READY
@@ -615,9 +461,6 @@
 	
 	// WINDOW ONLOAD
 	window.onload = function() {
-		
-		/* GALLERY COLLAGE LAYOUT */
-		collage();
 
 		// ON SCROLL ANIMATIONS
 		animate_blog();
@@ -657,71 +500,6 @@
 		
 	}
 	// ------------------------------
-	
-	
-	
-	// ------------------------------
-	// COLLAGE
-	function collage() {
-		var collage = $('.gallery');
-		if(collage.length) {
-			
-			collage.each(function(index, el) {
-				
-				// wait for images to be loaded
-				$(el).imagesLoaded(function() {
-					
-					$(el).addClass('collage-loaded');
-					$(el).collagePlus({
-						
-						'targetHeight' : 320,
-						'effect' : 'effect-2',
-						'allowPartialLastRow' : false
-						
-					}); //collagePlus()
-					
-				}); //imagesLoaded()
-				
-			}); //each
-		}
-	}
-	// ------------------------------
-	
-	
-	// ------------------------------
-	// MASONRY LAYOUT : changes the number of masonry columns based on the current container's width
-	function setMasonry() {
-		
-		var itemW = $masonry_container.data('item-width');
-		var mobileItemW = $masonry_container.data('mobile-item-width');
-		var containerW = $masonry_container.width();
-		itemW = containerW > 680 ? itemW : mobileItemW; // old :548
-		var items = $masonry_container.children('.hentry');
-		var columns = Math.round(containerW/itemW);
-		
-		if(containerW > 680 & containerW < 940) {
-			$masonry_container.removeClass('desktop-view').addClass('tablet-view');
-		} else if(containerW > 940) {
-			$masonry_container.addClass('desktop-view');
-		} else {
-			$masonry_container.removeClass('desktop-view tablet-view')
-		}
-	
-		// set the widths (%) for each of item
-		items.each(function(index, element) {
-			var multiplier = $(this).hasClass('x2') && columns > 1 ? 2 : 1;
-			var itemRealWidth = (Math.floor( containerW / columns ) * 100 / containerW) * multiplier ;
-			if($masonry_container.hasClass('first-full') && index == 0) {
-				itemRealWidth = 100;
-				}
-			$(this).css( 'width', itemRealWidth + '%' );
-		});
-	
-		var columnWidth = Math.floor( containerW / columns );
-		$masonry_container.isotope( 'option', { masonry: { columnWidth: columnWidth } } );
-	}
-	// ------------------------------
-	
 	
 	
 })(jQuery);
