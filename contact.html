@@ -1,0 +1,9 @@
+---
+layout: page
+title: Contact
+---
+Feel free to send me a message on 
+{% for s in site.data.social %}
+<a href="{{ s.url }}" target="_blank">{{ s.css }}</a>{% if forloop.last == false %},{% endif %}
+{% endfor %}
+ or per email: info [at] gockeln [dot] com. 

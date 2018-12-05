@@ -1,0 +1,13 @@
+---
+layout: default
+---
+ <article class="hentry post single-post">
+    <!-- .entry-content -->
+    <div class="entry-content">
+    	{% unless page.has_featured %}
+    	<h1 class="entry-title">{{ page.title }}</h1>
+    	{{ page.date | date: "%d. %B %Y" }}
+    	{% endunless %}
+    	{{ content }}
+	</div>
+</article>

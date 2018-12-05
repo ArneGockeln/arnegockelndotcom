@@ -1,0 +1,189 @@
+---
+layout: compress
+---
+<!doctype html>
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-classic header-dark header-small " data-effect="slideUp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This site is about software development and algorithmic trading on linux and macos.">
+    <meta name="keywords" content="algorithmic trading, software development, arne gockeln">
+    <meta name="author" content="Arne Gockeln">
+    <title>Arne Gockeln | {% if page.title.size > 0 %}{{ page.title }}{% else %}Software Developer & Algorithmic Trader{% endif %}</title>
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="{{ site.url }}/assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ site.url }}/assets/images/ico/apple-touch-icon.png"/>   
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.fluidbox/fluidbox.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/selection-sharer/selection-sharer.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/rotate-words.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/align.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/shortcodes/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/768.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/992.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/highlightjs/github.css">
+    <!-- INITIAL SCRIPTS -->
+	<script src="{{ site.url }}/assets/js/modernizr.min.js"></script>
+</head>
+<body class="">
+	<!-- page -->
+    <div id="page" class="hfeed site">
+        <!-- header -->
+        <header id="masthead" class="site-header" role="banner">
+            <!-- site-navigation -->
+            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                <!-- layout-medium -->
+                <div class="layout-medium">
+                    <a class="menu-toggle"><span class="lines"></span></a>
+                    <!-- nav-menu -->
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="{{ site.url }}/index.html">HOME</a></li>
+                            <li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
+                            <li><a href="{{ site.url }}/algotrading">Algo Trading</a></li>
+                            <li><a href="{{ site.url }}/about.html">ABOUT ME</a></li>
+                            <li><a href="{{ site.url }}/contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                    <!-- nav-menu -->
+                    <a class="search-toggle toggle-link"></a>
+                    <!-- search-container -->
+                    <div class="search-container">
+                        <div class="search-box" role="search">
+                            <form class="search-form">
+                                <label>Search Here
+                                    <input type="search" id="search-field" placeholder="type to search" name="s">
+                                </label>
+                                <ul id="results-container">
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- search-container -->
+                    <!-- social-container -->
+                    <div class="social-container">
+                    	{% for s in site.data.social %}
+                    	<a class="social-link {{ s.css }}" href="{{ s.url }}" target="_blank"></a>
+                    	{% endfor %}
+                    </div>
+                    <!-- social-container -->
+                </div>
+                <!-- layout-medium -->
+            </nav>
+            <!-- site-navigation -->	
+        </header>
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        	{% if page.has_featured %}
+                {% if page.featuredtitle %}
+                {% assign ftitle = page.featuredtitle %}
+                {% else %}
+                {% assign ftitle = page.title %}
+                {% endif %}
+        		{% include featured-top.html title=ftitle image=page.featuredimage datetime=page.date %}
+    		{% endif %}
+
+            {% if page.url == "/index.html" %}
+            <!-- show only on index -->
+            <div class="layout-medium">
+                <div id="primary" class="content-area">
+                 <div id="content" class="site-content" role="main">
+                        <div class="blog-creative first-full blog-stream">
+                            <article class="hentry post has-post-thumbnail">
+                                <div class="post-thumbnail" style="background-image:url(assets/images/algodevteaser.jpg)"></div>                                
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+        	<div class="layout-fixed"> 
+            	<div id="primary" class="content-area">
+                    <!-- site-content -->
+                    <div id="content" class="site-content" role="main"> 
+                		{{ content }}        
+                    </div>
+                    <!-- site-content -->
+            	</div>
+                <!-- primary -->
+            </div>
+            <!-- layout -->
+        </div>
+        <!-- site-main -->
+        <!-- site-footer -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <!-- layout-medium -->
+            <div class="layout-medium">
+                <!-- footer-social -->
+                <div class="footer-social">
+                    <div class="textwidget">
+                        {% for s in site.data.social %}
+                    	<a class="social-link {{ s.css }}" href="{{ s.url }}" target="_blank"></a>
+                    	{% endfor %}
+                    </div>
+                </div>
+                <!-- footer-social -->
+            </div>
+            <!-- layout-medium -->
+            <!-- .site-info -->
+            <div class="site-info">
+                <!-- layout-medium -->
+            	<div class="layout-medium">
+            		<div class="textwidget">Software <em>craftsmanship</em> with <i class="pw-icon-heart"></i> and passion in Hamburg.</div>
+            		<div class="textwidget"><a href="{{ site.url }}/impressum.html">Imprint (German)</a> | <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR</a>
+                </div>
+            	<!-- layout-medium -->
+            </div>
+            <!-- .site-info -->
+		</footer>
+        <!-- site-footer -->
+	</div>
+    <!-- page -->
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+	   if (!window.jQuery) { 
+		  document.write('<script src="{{ site.url }}/assets/js/jquery-3.1.1.min.js"><\/script>'); 
+	   }
+	</script>
+    <script src="{{ site.url }}/assets/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="{{ site.url }}/assets/js/fastclick.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.fitvids.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.viewport.mini.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.waypoints.min.js"></script>    
+    <script src="{{ site.url }}/assets/js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="{{ site.url }}/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.isotope.min.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.fluidbox/jquery.fluidbox.min.js"></script>
+    <script src="{{ site.url }}/assets/js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{{ site.url }}/assets/js/selection-sharer/selection-sharer.js"></script>
+    <script src="{{ site.url }}/assets/js/socialstream.jquery.js"></script>
+    <script src="{{ site.url }}/assets/js/jquery.collagePlus/jquery.collagePlus.min.js"></script>
+    <script src="{{ site.url }}/assets/js/main.js"></script>
+    <script src="{{ site.url }}/assets/js/shortcodes/shortcodes.js"></script>
+    <script src="{{ site.url }}/assets/js/highlight.pack.js"></script>
+    <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
+    <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-field'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.url }}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

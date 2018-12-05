@@ -1,0 +1,7 @@
+# 1 Month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|pdf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
