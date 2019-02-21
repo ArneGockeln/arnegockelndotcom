@@ -1,0 +1,11 @@
+- name: "sublimetext-cmake"
+  desc: "This project sets up Sublime Text 3 as C++ IDE with CMake Build System. It is possible to build right from ST3 with shortcut CMD+B."
+  url: "https://github.com/ArneGockeln/sublimetext-cmake"
+  
+- name: "qtstarter"
+  desc: "C++/Qt5 CLion starter project with cmake build system."
+  url: "https://github.com/ArneGockeln/qtstarter"
+
+- name: "xtbclient"
+  desc: "The xtbclient lib is a C++14 class library that enables communication via sockets between your trading program and the XTB trading server."
+  url: "https://github.com/ArneGockeln/xtbclient"

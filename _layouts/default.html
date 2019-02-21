@@ -7,14 +7,14 @@ layout: compress
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.url == "/index.html" %}
-    <meta name="description" content="This blog is about software development and algorithmic trading on linux and macos.">
-    <meta name="keywords" content="algorithmic trading, software development, arne gockeln">
+    <meta name="description" content="This blog is about software development and financial trading on linux and macos.">
+    <meta name="keywords" content="blog, software development, arne gockeln">
     {% else %}
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     {% endif %}
     <meta name="author" content="Arne Gockeln">
-    <title>Arne Gockeln | {% if page.title.size > 0 %}{{ page.title }}{% else %}Software Developer & Algorithmic Trader{% endif %}</title>
+    <title>Arne Gockeln | {% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}</title>
     <!-- FAV and TOUCH ICONS -->
     <link rel="shortcut icon" href="{{ site.url }}/assets/images/ico/favicon.ico">
     <link rel="apple-touch-icon" href="{{ site.url }}/assets/images/ico/apple-touch-icon.png"/>   
@@ -47,11 +47,12 @@ layout: compress
                     <!-- nav-menu -->
                     <div class="nav-menu">
                         <ul>
-                            <li><a href="{{ site.url }}/index.html">HOME</a></li>
-                            <li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
-                            <li><a href="{{ site.url }}/algotrading">Algo Trading</a></li>
-                            <li><a href="{{ site.url }}/about.html">ABOUT ME</a></li>
-                            <li><a href="{{ site.url }}/contact.html">CONTACT</a></li>
+                            <li><a href="{{ site.url }}/index.html">Home</a></li>
+                            <!--<li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
+                            <li><a href="{{ site.url }}/trading">Trading</a></li>
+                            <li><a href="{{ site.url }}/handson">Hands on</a></li>-->
+                            <li><a href="{{ site.url }}/about.html">About me</a></li>
+                            <li><a href="{{ site.url }}/contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <!-- nav-menu -->
@@ -94,7 +95,7 @@ layout: compress
 
             {% if page.url == "/index.html" %}
             <!-- show only on index -->
-            <div class="layout-medium">
+            <!--div class="layout-medium">
                 <div id="primary" class="content-area">
                  <div id="content" class="site-content" role="main">
                         <div class="blog-creative first-full blog-stream">
@@ -104,7 +105,7 @@ layout: compress
                         </div>
                     </div>
                 </div>
-            </div>
+            </div-->
             {% endif %}
 
         	<div class="layout-fixed"> 
@@ -181,5 +182,19 @@ layout: compress
       })
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
+    {% if jekyll.environment == "production" %}
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://analytics.gockeln.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '7']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    {% endif %}
 </body>
 </html>

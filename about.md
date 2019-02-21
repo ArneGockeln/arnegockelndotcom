@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About me
+keywords: "arne gockeln, software development, c++"
+description: "a few words about Arne Gockeln"
 ---
 {% capture portrait %}
 <div class="wp-caption alignright">
@@ -10,36 +12,28 @@ title: About me
 {% endcapture %}
 {{ portrait }}
 
-I was born 1982 in Herdecke, Germany and grew up in Dortmund. At the age of 7-8 I started my journey as a software developer by changing code fragments in the computer games I was playing. This is where everything starts. I was so excited that I could change the color and behavior of the soldiers only by changing some values in an ini file. That was awesome!
+I was born 1982 in Herdecke, Germany and grew up in Dortmund. At the age of 7-8 I started my journey as a software developer by changing code fragments in the computer games I was playing. This is where everything starts. So I started to learn basic on DOS 6.22 and right after that C on linux. Between 10 to 18 I developed computer games, software tools and got into the world wide web.  
 
-So I started to learn basic on DOS 6.22 and right after that C on linux. Between 10 to 18 I developed computer games, software tools and got into the world of the world wide web.  
+With the age of 18, around 2000/2001, I founded my first software company and since then I have been involved in applied software development, web development, game development, bash scripting and linux system administration.
 
-I broke school and started my first software company. It started as a huge success but ended in a disaster. Well, lesson learned. 
+In 2018 I moved to Hamburg, Germany.
 
-To get rid of my debt, I took every software developer job that I could get. That was the best thing I could do, because I learned so much in real world projects and build my skills as a software developer. All the things that you can't learn in school or at a university. Just learning by doing. 
+## Favorite Tools
 
-In 2011 I crossed the financial trading world by visiting my Dad and a friend of him. This friend made a fortune in stocks and was very enthusiastic about his new live. This kind of concept to earn money inspired me to investigate further, but at that time I was into video game and web development also. 
+I love the open source world and everything related. Mainly I work on macOS and debian linux on a daily basis. My favorite programming languages are C/C++ and PHP. I like to use the Qt Framework to build gui applications, but I am also a fan of ncurses.
 
-## The New World
+I like to keep things simple. To write code I use Sublime Text with plugins for PHP and C++ auto-completition, syntax highlighting and cmake as build system. On [github]({{ site.data.social.github.url }}){:target="_blank"} you can find my public projects. 
 
-Because I love new challenges, some years later I graduated in 3d game development and a second graduation in C/C++ system development on the linux platform. At this point I came at crossroads and had to decide which way I want to go. On one hand the fascinating world of computer game development or on the other by trading the financial markets.
+For blogging and websites I use the static site processor jekyll. 
 
-I made a SWOT analysis for myself and decided to deep dive into the world of the financial markets. From now on I read books and websites about technical and fundamental analysis, indicators and oscillators, multiple timeframe analysis, trading platforms, micro economics, trading psychology and made my first steps as a trader with a micro account in the forex market. But man, it was so boring for me to sit in front of several charts to wait for the next entry signal which is why I started to ask myself if this is the right way for me to trade the markets. 
+To be quick and automate a lot of things I am heavily into bash scripting and be a terminal power user.
 
-Questions like "*What is the smallest timeframe to trade?*" or "*How many quotes are inside a one minute candle?*" or "*What can I do with all my gained knowledge about applied software development?*" or "**Am I able to build a high performance signal algorithm which trades for me?**" The latter did not let go of me anymore. So I decided to stop trading manually and start to learn everything about algorithmic trading. I invested a lot of time, money and discipline to get there. 
-
-On my way I came across very fascinating new topics like the high frequency trading (HFT) world, higher mathematics, trading protocols like FIX (Financial Information Exchange), order and price management systems, quantitative analysis, performance optimizations, algorithmic trading strategies and so on and on. I love it! 
-
-In 2017 I decided to change from a freelance software developer to a full time algorithmic trader, but I needed some time to switch. 2018 I moved to Hamburg and started as a passionate full time algorithmic trader.
 
 ## Why another blog?
 
-First things first: I love what I do and I want to work with other like mindet adventureres. Also I didn't get where I am now by only buying online courses or reading expensive trading books. I want to share my practical knowledge and experience, which is growing every single day. I plan to write about at least to main topics like applied software development and algorithmic trading. And because I am a big fan of linux and macOS the content of this website is dedicated to such systems.
+I love what I do and I want to work with and talk to other like mindet adventureres. Also I want to share my practical knowledge and experience. I want to publish articles and content about everything that is in my interest. At least these are software  development and financial trading topics.
 
-I am dreaming about a single blog which helps you to get into the world of software development and algorithmic trading on top.  
+Also I am always interested in meeting new people all over the world and discuss interesting topics. Feel free to contact me here: 
+{% for s in site.data.social %}[{{ s.css }}]({{ s.url }}){:target="_blank"}{% if forloop.last == false %}, {% endif %}{% endfor %}! Especially if you are in Hamburg, let's go for a cup of tea.
 
-Also I am always interested in meeting new people all over the world and discuss interesting topics. Feel free to [contact]({{ site.url }}/contact.html) me!
-
-I am looking forward to this journey!
-
-Arne.
+Arne
