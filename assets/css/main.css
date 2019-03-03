@@ -2324,10 +2324,10 @@ body {
  	color: #222;
 	}
 /* Links */
-a {
+a, .btn-agree {
  	color: #2BBE8D;
 	}
-a:hover { /* #096 */
+a:hover, .btn-agree:hover { /* #096 */
  	color: #096;
 	}
 

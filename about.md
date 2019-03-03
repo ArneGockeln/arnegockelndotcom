@@ -12,22 +12,23 @@ description: "a few words about Arne Gockeln"
 {% endcapture %}
 {{ portrait }}
 
-I was born 1982 in Herdecke, Germany and grew up in Dortmund. At the age of 7-8 I started my journey as a software developer by changing code fragments in the computer games I was playing. This is where everything starts. So I started to learn basic on DOS 6.22 and right after that C on linux. Between 10 to 18 I developed computer games, software tools and got into the world wide web.  
+I am a passionate software developer and financial trader based in Hamburg, Germany. 
 
-With the age of 18, around 2000/2001, I founded my first software company and since then I have been involved in applied software development, web development, game development, bash scripting and linux system administration.
+Since 2000 I have been involved in applied software development, web development, game development, bash scripting, linux system administration and startup founding. 
 
-In 2018 I moved to Hamburg, Germany.
+In the last 18 years I was working as a founder and ceo of a software company and as a freelancer and solo-entrepreneur in web- and software development.
+
+Since 2011 I invest a lot of time to work on topics around technical analysis and algorithmic trading in the financial markets, mainly in forex. 
 
 ## Favorite Tools
 
 I love the open source world and everything related. Mainly I work on macOS and debian linux on a daily basis. My favorite programming languages are C/C++ and PHP. I like to use the Qt Framework to build gui applications, but I am also a fan of ncurses.
 
-I like to keep things simple. To write code I use Sublime Text with plugins for PHP and C++ auto-completition, syntax highlighting and cmake as build system. On [github]({{ site.data.social.github.url }}){:target="_blank"} you can find my public projects. 
+I like to keep things simple. To write code I use Sublime Text with plugins for PHP and C++ auto-completition, syntax highlighting and cmake as build system. On [github](https://github.com/arnegockeln){:target="_blank"} you can find my public projects. 
 
 For blogging and websites I use the static site processor jekyll. 
 
-To be quick and automate a lot of things I am heavily into bash scripting and be a terminal power user.
-
+To be quick and to automate a lot of things I am heavily into bash scripting. I would say I am a terminal power user.
 
 ## Why another blog?
 

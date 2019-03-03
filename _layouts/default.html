@@ -111,7 +111,14 @@ layout: compress
         	<div class="layout-fixed"> 
             	<div id="primary" class="content-area">
                     <!-- site-content -->
-                    <div id="content" class="site-content" role="main"> 
+                    <div id="content" class="site-content" role="main">
+                        <!-- GDPR -->
+                        <div class="alert hide" id="gdpralert">
+                            <h3>This website uses cookies</h3>
+                            <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website. Read all about our <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR here.</a></p>
+                            <p><span class="close btn-agree" style="font-size: 1.2em;cursor:pointer;">I agree</span></p>
+                        </div>
+
                 		{{ content }}        
                     </div>
                     <!-- site-content -->
@@ -185,6 +192,7 @@ layout: compress
     {% if jekyll.environment == "production" %}
     <script type="text/javascript">
       var _paq = window._paq || [];
+      _paq.push(['requireConsent']);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
@@ -194,6 +202,16 @@ layout: compress
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
+      function checkGDPR() {
+        if ( document.cookie.indexOf('mtm_consent=') == -1 ) {
+            $('div#gdpralert').slideDown().removeClass('hide');
+        }
+      }
+      checkGDPR();
+      $('div#gdpralert span.btn-agree').on('click', function(e) {
+        _paq.push(['rememberConsentGiven']);
+        $('#gdpralert').slideUp();
+      });
     </script>
     {% endif %}
 </body>

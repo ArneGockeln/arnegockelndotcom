@@ -1,7 +1,21 @@
 {
+	"build_systems":
+	[
+		{
+			"file_regex": "/([^/:]+):(\\d+):(\\d+): ",
+			"name": "cmake build",
+			"shell_cmd": "if [ ! -d ${project_path}/build ]; then mkdir ${project_path}/build; fi && cd ${project_path}/build && cmake .. && make -j4"
+		}
+	],
 	"folders":
 	[
 		{
+			"index_exclude_patterns":
+			[
+				"build",
+				"cmake-build-debug",
+				"libs"
+			],
 			"path": "."
 		}
 	]
