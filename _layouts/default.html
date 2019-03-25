@@ -48,9 +48,10 @@ layout: compress
                     <div class="nav-menu">
                         <ul>
                             <li><a href="{{ site.url }}/index.html">Home</a></li>
-                            <!--<li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
+                            <li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
                             <li><a href="{{ site.url }}/trading">Trading</a></li>
-                            <li><a href="{{ site.url }}/handson">Hands on</a></li>-->
+                            <li><a href="{{ site.url }}/apps">Apps</a></li>
+                            <!--<li><a href="{{ site.url }}/handson">Hands on</a></li>-->
                             <li><a href="{{ site.url }}/about.html">About me</a></li>
                             <li><a href="{{ site.url }}/contact.html">Contact</a></li>
                         </ul>
@@ -176,6 +177,9 @@ layout: compress
     <script src="{{ site.url }}/assets/js/shortcodes/shortcodes.js"></script>
     <script src="{{ site.url }}/assets/js/highlight.pack.js"></script>
     <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
+    {% if page.is_post %}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    {% endif %}
     <script>
       window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-field'),

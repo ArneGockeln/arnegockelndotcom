@@ -1,0 +1,6 @@
+<!-- include it like: { % include paddle.html productname="Awesome Product" productid="123" % } -->
+<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+<script type="text/javascript">
+	Paddle.Setup({ vendor: 20368 });
+</script>
+<a href="#!" class="paddle_button" data-success="{{ site.url }}/thankyou.html" data-product="{{ include.productid }}">Buy {{ include.productname }}!</a>

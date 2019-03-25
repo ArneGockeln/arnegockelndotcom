@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.arnegockeln.com" # the base hostname & protocol for your site, e.g. http://example.com
-default_title: "Software Developer & Trader"
+default_title: "Thoughts and Projects"
 
 # Build settings
 markdown: kramdown
@@ -66,3 +66,11 @@ jekyll-minifier:
   compress_css: true
   compress_javascript: true
   exclude: ["*.html", "*.xml"]
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts

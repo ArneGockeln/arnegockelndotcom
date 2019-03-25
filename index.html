@@ -3,14 +3,11 @@ layout: page
 pagination: 
   enabled: true
 ---
-
-<p>I am working heavily on content. Stay tuned.</p>
-<p>In the meantime check my github projects or read something <a href="/about.html">about myself</a></p>
-
-<h3>Github Projects</h3>
+<h2>Github Projects</h2>
+<div class="row">
 {% for s in site.data.projects %}
-<p><a href="{{ s.url }}" target="_blank">{{ s.name }}</a><br/>{{ s.desc }}</p>
+	<div class="col-sm-12 col-md-6"><br/><a href="{{ s.url }}" target="_blank"><h3>{{ s.name }}</h3></a>{{ s.desc }}</div>
 {% endfor %}
-
+</div>
 
 {% include category-pagination.html %}

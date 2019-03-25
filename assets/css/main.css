@@ -1382,7 +1382,7 @@ html {
  	content: "\e872"
 	}
 .format-link .entry-content  > p:first-child a:first-child {
-    font-size: 1em; font-style: italic; word-break: break-all; padding: .4em 1.2em; margin-bottom: 1em; display: inline-block; border: 2px solid #2BBE8D; 	
+    font-size: 1em; font-style: italic; word-break: break-all; padding: .4em 1.2em; margin-bottom: 1em; display: inline-block; border: 2px solid #4A8DC6; 	
 	}
 /* status  */
 .format-status .entry-meta:before {
@@ -2325,18 +2325,24 @@ body {
 	}
 /* Links */
 a, .btn-agree {
- 	color: #2BBE8D;
+ 	color: #4A8DC6;
 	}
 a:hover, .btn-agree:hover { /* #096 */
  	color: #096;
 	}
 
+a:hover {
+	text-decoration: underline;
+	background: none;
+	color: #4A8DC6;
+}
+
 /* Text Selection */
 ::selection {
- 	text-shadow: none; color: #000; background: #FFF9CD;
+ 	text-shadow: none; color: #000; /* background: #FFF9CD;*/
 	}
 ::-moz-selection {
- 	text-shadow: none; color: #000; background: #FFF9CD;
+ 	text-shadow: none; color: #000; /* background: #FFF9CD; */
 	}
 
 /* STYLE : FLAT */
@@ -2487,7 +2493,7 @@ a:hover, .btn-agree:hover { /* #096 */
     background: #212933;
     }
 
-/* PRIMARY COLOR : #2BBE8D */
+/* PRIMARY COLOR : #4A8DC6 */
 .flat-style .entry-meta .cat-links a,
 .flay-style .owl-theme .owl-dots .owl-dot.active span,
 .flat-style input[type=submit], 
@@ -2498,12 +2504,12 @@ a:hover, .btn-agree:hover { /* #096 */
 .flat-style .skill-unit .bar .progress span,
 .flat-style .event [class*="pw-icon-"],
 .flat-style .owl-theme .owl-dots .owl-dot.active span {
-	background: #2BBE8D;
+	background: #4A8DC6;
 	}
 .flat-style .format-link .entry-content > p:first-child a:first-child,
 .flat-style .event.current:after,
 .flat-style input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]):focus,
 .flat-style textarea:focus,
 .flat-style select:focus {
-	border-color: #2BBE8D;
+	border-color: #4A8DC6;
 	}

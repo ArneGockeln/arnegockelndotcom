@@ -1,3 +1,7 @@
+- name: "FX Calc"
+  desc: "This application is a tool to calculate forex position sizes as lots and quantity. Also it shows how much margin is required to open the position."
+  url: "https://github.com/ArneGockeln/fxcalc"
+  
 - name: "sublimetext-cmake"
   desc: "This project sets up Sublime Text 3 as C++ IDE with CMake Build System. It is possible to build right from ST3 with shortcut CMD+B."
   url: "https://github.com/ArneGockeln/sublimetext-cmake"
