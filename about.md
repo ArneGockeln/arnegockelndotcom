@@ -34,7 +34,11 @@ To be quick and to automate a lot of things I am heavily into bash scripting. I 
 
 I love what I do and I want to work with and talk to other like mindet adventureres. Also I want to share my practical knowledge and experience. I want to publish articles and content about everything that is in my interest. At least these are software  development and financial trading topics.
 
-Also I am always interested in meeting new people all over the world and discuss interesting topics. Feel free to contact me here: 
-{% for s in site.data.social %}[{{ s.css }}]({{ s.url }}){:target="_blank"}{% if forloop.last == false %}, {% endif %}{% endfor %}! Especially if you are in Hamburg, let's go for a cup of tea.
+## Standing Invitation
+
+As I am always interested in meeting new people all over the world, this is a standing invitation: if you want to talk about startups, software development or trading, I want to talk to you.
+
+Feel free to contact me here: 
+{% for s in site.data.social %}[{{ s.css }}]({{ s.url }}){:target="_blank"}{% if forloop.last == false %}, {% endif %}{% endfor %}! Especially if you are in Hamburg, I would also love to meet you in person! The first cup of tea (or coffee) goes on me!
 
 Arne

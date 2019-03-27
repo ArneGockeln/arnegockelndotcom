@@ -47,13 +47,9 @@ layout: compress
                     <!-- nav-menu -->
                     <div class="nav-menu">
                         <ul>
-                            <li><a href="{{ site.url }}/index.html">Home</a></li>
-                            <li><a href="{{ site.url }}/softwaredev">Software Dev</a></li>
-                            <li><a href="{{ site.url }}/trading">Trading</a></li>
-                            <li><a href="{{ site.url }}/apps">Apps</a></li>
-                            <!--<li><a href="{{ site.url }}/handson">Hands on</a></li>-->
-                            <li><a href="{{ site.url }}/about.html">About me</a></li>
-                            <li><a href="{{ site.url }}/contact.html">Contact</a></li>
+                            {% for n in site.data.mainnav %}
+                            <li><a href="{{ n.url|prepend: site.url }}">{{ n.text }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <!-- nav-menu -->

@@ -1,0 +1,17 @@
+- url: "/index.html"
+  text: "Home"
+
+- url: "/softwaredev"
+  text: "Software Dev"
+
+- url: "/trading"
+  text: "Trading"
+
+- url: "/apps"
+  text: "Apps"
+
+- url: "/about.html"
+  text: "About me"
+
+- url: "/contact.html"
+  text: "Contact"
