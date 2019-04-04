@@ -3,7 +3,7 @@ layout: post
 title: "Calculate Forex Position and Margin requirements"
 date: 2019-03-25 11:53:02 +0100
 author: Arne Gockeln
-categories: [softwaredev, trading]
+categories: [trading]
 ---
 
 If you go for manual forex trading you need to calculate the correct position size. The position size and margin requirement depends on your risk and money management and needs to be calculated for every trade again.

@@ -1,13 +1,92 @@
 ---
 layout: page
-pagination: 
-  enabled: true
+featuredimage: "/uploads/042019/jesus-kiteque-224069-unsplash.jpg"
+featuredtitle: "I turn algorithms into opportunities"
+has_featured: true
 ---
-<h2>Github Projects</h2>
-<div class="row">
-{% for s in site.data.projects %}
-	<div class="col-sm-12 col-md-6"><br/><a href="{{ s.url }}" target="_blank"><h3>{{ s.name }}</h3></a>{{ s.desc }}</div>
-{% endfor %}
+<!-- BLOG LIST -->
+<div class="blog-creative  blog-stream">
+	<!-- .hentry -->
+	<article class="hentry post has-post-thumbnail">
+		<div class="post-thumbnail post-img" style="background-image:url({{ site.url }}/uploads/042019/wu-yi-152057-unsplash-thumb.jpg)">
+			<a href="{{ site.url }}/workshops/algorithmic-trading-workshop.html">Algorithmic Trading Workshop</a>
+		</div>
+		<div class="post-thumbnail post-desc">
+			<!-- .entry-header -->
+			<header class="entry-header">
+				<!-- .entry-meta -->
+				<div class="entry-meta">
+					<span class="cat-links">
+						<a href="{{ site.url }}/workshops/index.html" title="View all workshops" rel="category tag">Workshop</a>
+					</span>	
+				</div>
+				<!-- .entry-meta -->
+				<!-- .entry-title -->
+				<h2 class="entry-title"><a href="blog-single.html">Algorithmic Trading Workshop</a></h2>
+			</header>
+			<!-- .entry-header -->
+		</div>
+	</article>
+	<!-- .hentry -->
+	<!-- .hentry -->
+	<article class="hentry post has-post-thumbnail">
+		<div class="post-thumbnail post-img" style="background-image:url({{ site.url }}/uploads/042019/fabian-grohs-423591-unsplash.jpg)">
+			<a href="blog-single.html">API Trading Workshop</a>
+		</div>
+		<div class="post-thumbnail post-desc">
+			<header class="entry-header">
+				<div class="entry-meta">
+					<span class="cat-links">
+						<a href="{{ site.url }}/workshops/index.html" title="View all workshops" rel="category tag">Workshop</a>
+					</span>	
+				</div>
+				<h2 class="entry-title"><a href="blog-single.html">API Trading Workshop</a></h2>
+			</header>
+		</div>
+	</article>
+	<article class="hentry post has-post-thumbnail">
+		<div class="post-thumbnail post-img" style="background-image:url({{ site.url  }}/uploads/042019/chris-liverani-552652-unsplash.jpg)">
+			<a href="blog-single.html">Indicator Development</a>
+		</div>
+		<div class="post-thumbnail post-desc">
+			<header class="entry-header">
+				<div class="entry-meta">
+					<span class="cat-links">
+						<a href="{{ site.url }}/services/index.html" title="View all services" rel="category tag">Service</a>
+					</span>	
+				</div>
+				<h2 class="entry-title"><a href="blog-single.html">Indicator Development</a></h2>
+			</header>
+		</div>
+	</article>
+	<article class="hentry post has-post-thumbnail">
+		<div class="post-thumbnail post-img" style="background-image:url({{ site.url }}/uploads/042019/jeshoots-com-632498-unsplash.jpg)">
+			<a href="blog-single.html">Strategy Development</a>
+		</div>
+		<div class="post-thumbnail post-desc">
+			<header class="entry-header">
+				<div class="entry-meta">
+					<span class="cat-links">
+						<a href="{{ site.url }}/workshops/index.html" title="View all workshops" rel="category tag">Workshop</a>
+					</span>	
+				</div>
+				<h2 class="entry-title"><a href="blog-single.html">Strategy Development</a></h2>
+			</header>
+		</div>
+	</article>
+	<article class="hentry post has-post-thumbnail">
+		<div class="post-thumbnail post-img" style="background-image:url({{ site.url }}/uploads/042019/austin-distel-1462329-unsplash.jpg)">
+			<a href="blog-single.html">Custom Software Development</a>
+		</div>
+		<div class="post-thumbnail post-desc">
+			<header class="entry-header">
+				<div class="entry-meta">
+					<span class="cat-links">
+						<a href="{{ site.url }}/services/index.html" title="View all services" rel="category tag">Service</a>
+					</span>	
+				</div>
+				<h2 class="entry-title"><a href="blog-single.html">Custom Software Development</a></h2>
+			</header>
+		</div>
+	</article>
 </div>
-
-{% include category-pagination.html %}
