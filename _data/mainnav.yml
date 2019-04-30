@@ -31,8 +31,8 @@
   sub:
     - url: "/business"
       text: "Business"
-    - url: "/softwaredev"
-      text: "Software Dev"
+    # - url: "/softwaredev"
+    #   text: "Software Dev"
     - url: "/trading"
       text: "Trading"
 

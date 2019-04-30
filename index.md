@@ -6,7 +6,7 @@ has_featured: true
 ---
 ## What are algorithms?
 
-You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like c++ or python.
+You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or python.
 
 In the design process we can write an algorithm as a list of steps using text or as a picture with shapes and arrows called a flowchart.
 
@@ -49,3 +49,6 @@ An often surprising fact to tea novices is that all teas (Black, green, Oolong, 
 I drink green and black tea every day. Especially when I am using a code editor or when I have to create efficient algorithms.
 
 Let's get in [contact]({{ site.url }}/contact.html) and drink a cup of tea together!
+
+Arne<br/>
+*Algorithmic Adventurer*

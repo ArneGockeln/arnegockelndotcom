@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Blog"
-keywords: "arne gockeln, software development, algorithmic trading, c++"
+keywords: "software, development, algorithmic, trading, business"
 description: "The blog about thoughts and projects of Arne Gockeln"
 ---
 {% for category in site.categories %}
