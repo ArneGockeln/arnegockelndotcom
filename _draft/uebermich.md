@@ -1,9 +1,3 @@
----
-layout: page
-title: "Selbstvorstellung"
-keywords: "arne gockeln, software entwicklung, c++, finanzmarkt, algorithmisch"
-description: "Ein kurzes Selbstporträt von Arne Gockeln"
----
 {% capture portrait %}
 <div class="wp-caption alignright">
     <img src="{{ site.url }}/assets/images/arne_gockeln_portrait.jpg" alt="Portrait Arne Gockeln"/>
@@ -16,7 +10,7 @@ Ich habe meine große Leidenschaft, die Software Entwicklung, zu meinem Beruf ge
 
 Seit dem Jahr 2000 bin ich schon als Gründer und Freiberufler unterwegs. In dieser Zeit habe ich sehr viel Erfahrung in der angewandten Software Entwicklung im Unix und Web Umfeld, in der Linux System Administration, im Open Source Bereich und seit 2011 als Forex Trader sammeln können.
 
-Ich liebe die Open-Source-Welt und alles was damit zusammenhängt. Hauptsächlich arbeite ich mit macOS und debian Linux. Meine bevorzugten Programmiersprachen sind C/C++ und PHP. Ich benutze das Qt Framework gerne, um GUI-Anwendungen zu entwickeln, aber ich bin auch ein Fan von ncurses, bash Scripting und Kommandozeilenprogrammen. 
+Ich liebe die Open-Source-Welt und alles was damit zusammenhängt. Hauptsächlich arbeite ich mit macOS und debian Linux. Meine bevorzugten Programmiersprachen sind C/C++, PHP und Python. Ich benutze das Qt Framework gerne, um GUI-Anwendungen zu entwickeln, aber ich bin auch ein Fan von ncurses, bash Scripting und Kommandozeilenprogrammen. 
 
 2019 habe ich mich dazu entschlossen mein Wissen zu teilen und arbeite intensiv daran, entsprechende Video Kurse und Workshops zu konzipieren. Ich würde mich freuen, wenn wir uns dort sehen!
 

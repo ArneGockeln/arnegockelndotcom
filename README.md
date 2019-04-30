@@ -1,2 +1,2 @@
 # arnegockelndotcom
-my jekyll website
+my jekyll blog on https://arnegockeln.com

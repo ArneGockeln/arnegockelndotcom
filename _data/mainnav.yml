@@ -23,21 +23,21 @@
 #    - url: "/workshops/strategy-development-and-backtesting.html"
 #      text: "Strategy Development and Backtesting"
 
-- url: "/projekte.html"
-  text: "Projekte"
+- url: "/projects.html"
+  text: "Projects"
 
 - url: "/blog.html"
   text: "Blog"
   sub:
+    - url: "/business"
+      text: "Business"
     - url: "/softwaredev"
       text: "Software Dev"
     - url: "/trading"
       text: "Trading"
-#    - url: "/business"
-#      text: "Business"
 
-- url: "/uebermich.html"
-  text: "&Uuml;ber mich"
+- url: "/about.html"
+  text: "About me"
 
-- url: "/kontakt.html"
-  text: "Kontakt"
+- url: "/contact.html"
+  text: "Contact"

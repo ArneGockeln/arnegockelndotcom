@@ -74,3 +74,9 @@ defaults:
       type: posts   # limit to posts
     values:
       is_post: true # automatically set is_post=true for all posts
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      is_post: false
