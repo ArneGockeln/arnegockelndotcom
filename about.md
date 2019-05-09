@@ -18,6 +18,6 @@ Since the year 2000 I have been on the road as a founder and freelancer. During 
 
 I love the open source world and everything related to it. Mainly I work with macOS and debian Linux. My preferred programming languages are C/C++, PHP and Python. I like to use the Qt framework to develop GUI applications, but I'm also a fan of ncurses, bash scripting and command line programs. 
 
-In 2019 I decided to share my knowledge and am working hard to design video courses and workshops. I would be happy to see you there!
+In 2019 I decided to share my knowledge and meet with other great algorithmic adventurers. So I founded the [Algorithmic/Quantitative Trading Hamburg](https://www.meetup.com/de-DE/Algorithmic-Quantitative-Trading-Hamburg){:target="_blank"} Meetup. I would be happy to see you there!
 
 {% include invitation.html %}
