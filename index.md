@@ -13,30 +13,131 @@ In the design process we can write an algorithm as a list of steps using text or
 An algorithm is not the computer code. Algorithms are just the instructions which gives a clear idea how to write the computer code.
 
 ### Example
-This is an example to write an algorithm which finds the fibonacci series till terms <= 100
+This is an example to write an algorithm which finds the fibonacci series till terms <= 10
 
 ```conf
 Step 1: Start
-Step 2: Declare variables terms, a, b
-Step 3: Initialize variables terms = 100, a = 1, b = 1
-Step 4: Display a
-Step 5: Repeat the steps until i <= terms
-	5.1: a <- b
-	5.2: b <- a + b
-	5.3: Display b
-Step 6: Stop
+Step 2: Declare variables terms, arr
+Step 3: Initialize variables terms = 10, a = 0, b = 1, fib = 0
+Step 4: Repeat the steps until i <= terms
+  Step 4.1 Display a
+  Step 4.2 Assign fib <- a + b
+  Step 4.3 Assign a <- b
+  Step 4.4 Assign b <- fib
+Step 5: Stop
 ```
 
-The python code for this algorithm would look like this
+The code for this algorithm would look like this in 5 programming languages:
 
-```python
-terms = 100
-a,b   = 1,1
-print(str(a))
-for i in range(terms - 1):
-	a,b = b,a+b
-	print(str(a))
-```
+{% capture cpp %}
+{% highlight cpp %}
+// Fibonacci Sequence in C++
+#include <iostream>
+int main(int argc, char const *argv[]) {
+    int terms = 10;
+    int a = 0, b = 1, fib = 0;
+    for(int i = 0; i <= terms; i++) {
+        std::cout << a << std::endl;
+        fib = a + b;
+        a = b;
+        b = fib;
+    }
+    return 0;
+}
+{% endhighlight %}
+{% endcapture %}
+
+{% capture php %}
+{% highlight php %}
+<?php 
+// Fibonacci Sequence in PHP
+$terms = 10;
+$a = 0;
+$b = 1;
+for($i = 0; $i <= $terms; $i++) {
+    echo "$a \n";
+    $fib = $a + $b;
+    $a = $b;
+    $b = $fib;
+}
+{% endhighlight %}
+{% endcapture %}
+
+{% capture bash %}
+{% highlight bash %}
+#!/bin/bash
+# Fibonacci Sequence in Bash
+TERMS=10
+A=0
+B=1
+for((i=0; i<=TERMS; i++))
+do
+    echo "$A "
+    FIB=$((A + B))
+    A=$B
+    B=$FIB
+done
+{% endhighlight %}
+{% endcapture %}
+
+{% capture swift %}
+{% highlight swift %}
+// Fibonacci Sequence in Swift
+let terms = 10
+var A = 0
+var B = 1
+for _ in 0...terms {
+    print(String(A))
+    let fib = A + B
+    A = B
+    B = fib
+}
+{% endhighlight %}
+{% endcapture %}
+
+{% capture javascript %}
+{% highlight javascript %}
+// Fibonacci Sequence in JavaScript
+var terms = 10, a = 0, b = 1, fib = 0;
+for(var i = 0; i <= terms; i++) {
+    console.log(a);
+    fib = a + b;
+    a = b;
+    b = fib;
+}
+{% endhighlight %}
+{% endcapture %}
+
+{% capture tabs %}
+<div class="tabs">
+  <ul class="tab-titles">
+      <li><a class="active">C++</a></li>
+      <li><a>PHP</a></li>
+      <li><a>Swift</a></li>
+      <li><a>JavaScript</a></li>
+      <li><a>Bash</a></li>
+  </ul>
+  <div class="tab-content">
+      <div>
+        {{ cpp }}
+      </div>
+      <div>
+        {{ php }}
+      </div>
+      <div>
+        {{ swift }}
+      </div>
+      <div>
+        {{ javascript }}
+      </div>
+      <div>
+        {{ bash }}
+      </div>
+  </div>
+</div>
+{% endcapture %}
+
+{{ tabs }}
 
 ## What is tea?
 

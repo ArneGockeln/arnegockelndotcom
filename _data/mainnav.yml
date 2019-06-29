@@ -26,6 +26,9 @@
 - url: "/projects.html"
   text: "Projects"
 
+- url: "/freelance/"
+  text: "Freelance"
+
 - url: "/blog.html"
   text: "Blog"
   sub:
