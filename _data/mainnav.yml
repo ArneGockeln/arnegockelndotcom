@@ -11,36 +11,5 @@
 #    - url: "/workshops/index.html"
 #      text: "Workshops"
 
-#- url: "/workshops/index.html"
-#  text: "Workshops"
-#  sub:
-#    - url: "/workshops/api-trading.html"
-#      text: "API Trading"
-#    - url: "/workshops/ea-algo-metatrader.html"
-#      text: "EA/Algo MetaTrader"
-#    - url: "/workshops/cpp-for-trading.html"
-#      text: "C++ for Trading"
-#    - url: "/workshops/strategy-development-and-backtesting.html"
-#      text: "Strategy Development and Backtesting"
-
-- url: "/projects.html"
-  text: "Projects"
-
-- url: "/freelance/"
-  text: "Freelance"
-
 - url: "/blog.html"
   text: "Blog"
-  sub:
-    - url: "/business"
-      text: "Business"
-    # - url: "/softwaredev"
-    #   text: "Software Dev"
-    - url: "/trading"
-      text: "Trading"
-
-- url: "/about.html"
-  text: "About me"
-
-- url: "/contact.html"
-  text: "Contact"

@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!doctype html>
-<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-classic header-dark header-small " data-effect="slideUp">
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-classic header-light header-small " data-effect="slideUp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,6 +72,7 @@ layout: compress
                             {% endfor %}
                         </ul>
                     </div>
+                    {% unless page.url == "/" %}
                     <!-- nav-menu -->
                     <a class="search-toggle toggle-link"></a>
                     <!-- search-container -->
@@ -87,13 +88,7 @@ layout: compress
                         </div>
                     </div>
                     <!-- search-container -->
-                    <!-- social-container -->
-                    <div class="social-container">
-                    	{% for s in site.data.social %}
-                    	<a class="social-link {{ s.css }}" href="{{ s.url }}" target="_blank"></a>
-                    	{% endfor %}
-                    </div>
-                    <!-- social-container -->
+                    {% endunless %}
                 </div>
                 <!-- layout-medium -->
             </nav>
@@ -178,6 +173,7 @@ layout: compress
     {% if page.is_post %}
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     {% endif %}
+   {% unless page.url == "/" %}
     <script>
       window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-field'),
@@ -190,6 +186,7 @@ layout: compress
         exclude: ['Welcome']
       })
     </script>
+    {% endunless %}
     {% if jekyll.environment == "production" %}
     <script type="text/javascript">
       var _paq = window._paq || [];

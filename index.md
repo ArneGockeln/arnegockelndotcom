@@ -1,9 +1,22 @@
 ---
 layout: page
-featuredimage: "/uploads/042019/anastasia-yilmaz-621512-unsplash-small.jpg"
-featuredtitle: "I turn tea and algorithms into opportunities"
-has_featured: true
+title: I turn tea and algorithms into something
 ---
+{% capture portrait %}
+<div class="wp-caption alignright">
+    <img src="{{ site.url }}/assets/images/arne_gockeln_portrait.jpg" alt="Portrait Arne Gockeln"/>
+    <p class="wp-caption-text">Arne Gockeln</p>
+</div>
+{% endcapture %}
+
+## Hi
+{{ portrait }}
+my name is **Arne Gockeln** and I have made my great passion, **software development**, my profession. 
+
+Since the year 2000 I have been involved in web- and custom software development, founding business ideas and working as a freelancer.
+
+I love the open source world and everything related to it. Mainly I work with macOS and debian Linux. My preferred programming languages are C/C++, Swift, PHP and Bash. I like to use the Qt framework or AppKit to develop GUI applications, but I'm also a fan of ncurses, bash scripting and command line programs. 
+
 ## What are algorithms?
 
 You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or python.
@@ -149,7 +162,34 @@ An often surprising fact to tea novices is that all teas (Black, green, Oolong, 
 
 I drink green and black tea every day. Especially when I am using a code editor or when I have to create efficient algorithms.
 
-Let's get in [contact]({{ site.url }}/contact.html) and drink a cup of tea together!
+## Open Source Projects
+
+{% capture projectlist %}
+{% for s in site.data.projects %}
+{% assign mod = forloop.index | modulo: 2 %}
+{% if mod == 1 %}<div class="row">{% endif %}
+  <div class="col-sm-12 col-md-6"><h3>{{ s.name }} <a href="{{ s.url }}" target="_blank">github</a></h3> <p>{{ s.desc }}</p>
+  </div>
+{% if mod == 0 %}</div>{% endif %}
+{% endfor %}
+<!--/div-->
+{% endcapture %}
+
+{{ projectlist }}
+
+You can find more projects in my [Github Account](https://github.com/arnegockeln){:target="_blank"}.
+
+## Standing Invitation
+
+In 2018 I moved to **Hamburg** and every day I look forward to new discoveries and contacts. I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business and software development, then I invite you to get in touch with me.
+
+Especially if you are in **Hamburg**! Then I would also like to meet you personally. The first cup of tea or coffee is on me!
+
+{% capture socials %}
+{% for s in site.data.social %}<a href="{{ s.url }}" target="_blank">{{ s.css }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+{% endcapture %}
+
+You can shoot me a message on {{ socials }} or by good old email: sayhi@gockeln.com.
 
 Arne<br/>
 *Algorithmic Adventurer*
