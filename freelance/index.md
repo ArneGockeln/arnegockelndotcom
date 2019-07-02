@@ -30,16 +30,27 @@ This is a list of some of my past client projects:
 
 That is what I can help you with! What I can not help you with is all kind of frontend development. I am not a designer or web-designer! All I do is text related and in most cases happens in the background, which you as a user do not see. This is why it's called **backend software developer**.
 
+## Clients
+
+Here is a list of some of my clients which I have supported:
+
+- Ruhr24 GmbH & Co. KG
+- Wiethe Group GmbH
+- RTL Interactive GmbH
+- Vodafone GmbH
+- Bundesfachschule für Orthopädietechnik e.V.
+- Forscherstation, Klaus-Tschira-Kompetenzzentrum für frühe naturwissenschaftliche Bildung gGmbH
+- Standpunkt Kommunikation GmbH
+- and many more
+
 ## Skills
-
-Here is a list of some of my skills and a short client list which I have supported in the past:
-
 ### Programming Languages
 - POSIX C++
 - PHP
 - Bash
 - HTML
 - JavaScript
+- Swift
 
 ### Stacks
 - Linux/Apache/MySQL/PHP (LAMP Stack)
@@ -70,19 +81,6 @@ Here is a list of some of my skills and a short client list which I have support
 
 ### Operating Systems
 As a software developer I prefer to work with my own machine and environment. If that is not possible, I can work on macOS and Linux machines. I will not work on MS Windows! Please respect that.
-
-## Clients
-
-Here is a list of some of my clients which I have supported:
-
-- Ruhr24 GmbH & Co. KG
-- Wiethe Group GmbH
-- RTL Interactive GmbH
-- Vodafone GmbH
-- Bundesfachschule für Orthopädietechnik e.V.
-- Forscherstation, Klaus-Tschira-Kompetenzzentrum für frühe naturwissenschaftliche Bildung gGmbH
-- Standpunkt Kommunikation GmbH
-- and many more
 
 ## Contact
 
