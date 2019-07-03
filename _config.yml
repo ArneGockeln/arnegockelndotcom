@@ -25,6 +25,12 @@ kramdown:
   syntax_highlighter: rouge
   auto_ids: false
 
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # plugin  jekyll-paginate-v2 configuration
 pagination:
   enabled: true
@@ -40,7 +46,7 @@ pagination:
     after: 1
 
 # defaults to /:categories/:year/:month/:title:output_ext
-permalink: /:year/:month/:title:output_ext
+permalink: /blog/:year/:month/:title:output_ext
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -50,16 +56,13 @@ exclude:
   - Gemfile.lock
   - node_modules
   - _template
+  - _temp
   - .sass-cache
   - package.json
   - .gitignore
   - arnegockeln.sublime-workspace
   - arnegockeln.sublime-project
   - README.md
-#  - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
 jekyll-minifier:
   remove_comments: true

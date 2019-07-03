@@ -11,5 +11,5 @@
 #    - url: "/workshops/index.html"
 #      text: "Workshops"
 
-- url: "/blog.html"
+- url: "/blog/"
   text: "Blog"

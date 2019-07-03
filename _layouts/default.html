@@ -7,14 +7,14 @@ layout: compress
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.url == "/index.html" %}
-    <meta name="description" content="This blog is about software development and financial trading on linux and macos.">
+    <meta name="description" content="This website is about Arne Gockeln, a software developer on macos and linux.">
     <meta name="keywords" content="blog, software development, arne gockeln">
     {% else %}
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     {% endif %}
     <meta name="author" content="Arne Gockeln">
-    <title>Arne Gockeln | {% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}</title>
+    <title>Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}</title>
     <link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" /><!-- For old IEs -->
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="{{ site.url }}/assets/favicon/favicon.ico"><!-- For new browsers - multisize ico  -->
     <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/assets/favicon/favicon-152-precomposed.png"><!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->

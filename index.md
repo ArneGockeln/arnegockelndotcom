@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I turn tea and algorithms into something
+title: I turn tea and algorithms into computer code
 ---
 {% capture portrait %}
 <div class="wp-caption alignright">
@@ -8,18 +8,48 @@ title: I turn tea and algorithms into something
     <p class="wp-caption-text">Arne Gockeln</p>
 </div>
 {% endcapture %}
+{% capture socials %}
+{% for s in site.data.social %}<a href="{{ s.url }}" target="_blank">{{ s.css }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+{% endcapture %}
 
 ## Hi
 {{ portrait }}
-my name is **Arne Gockeln** and I have made my great passion, **software development**, my profession. 
+my name is **Arne Gockeln** and since the year 2000 I have been involved in **custom software and web development**, founding business ideas and working as a freelancer. 
 
-Since the year 2000 I have been involved in web- and custom software development, founding business ideas and working as a freelancer.
+## What can I do for you?
 
-I love the open source world and everything related to it. Mainly I work with macOS and debian Linux. My preferred programming languages are C/C++, Swift, PHP and Bash. I like to use the Qt framework or AppKit to develop GUI applications, but I'm also a fan of ncurses, bash scripting and command line programs. 
+I can help you transforming your business or project idea into beautiful **macOS desktop- or iOS mobile applications.** Also I can build high performance low maintenance **web applications** which are working cross-platform in any web browser.
+
+If you need to I can connect **third party APIs** to your existing application. A common use case would be to connect to a **JSON API** and read or post some data.
+
+If you are a startup and need help finishing your **minimum viable product (MVP)**, please let me know!
+
+Also I can help you with **project management tasks** and by **leading your team** of developers and designers to successfully build your digital product. 
+
+If you are interested in working with me, please shoot me a message on {{ socials }} or by good old email: sayhi@gockeln.com.
+
+## Freelance Work
+
+As a freelancer I worked from small to large projects as a one man solution and as a team member. In most of the projects my main task was the implementation of custom software, connecting APIs or developing custom WordPress Plugins. Also I build a lot of Websites using WordPress and the Jekyll static site processor. The best description of my job is **Backend Software Development**. 
+
+Some of my clients were
+
+- Ruhr24 GmbH & Co. KG
+- Wiethe Group GmbH
+- RTL Interactive GmbH
+- Vodafone GmbH
+- Bundesfachschule für Orthopädietechnik e.V.
+- Forscherstation, Klaus-Tschira-Kompetenzzentrum für frühe naturwissenschaftliche Bildung gGmbH
+- Standpunkt Kommunikation GmbH
+- ...
+
+## Technical Skills
+
+I love the open source world and everything related to it. Mainly I work with **macOS and Linux**. My preferred **programming languages** are **C/C++, Swift, PHP and Bash**. I like to use the **Qt framework** or **AppKit** to develop desktop and mobile applications, but I'm also a fan of **ncurses, bash scripting and command line programs**. 
 
 ## What are algorithms?
 
-You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or python.
+You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or swift.
 
 In the design process we can write an algorithm as a list of steps using text or as a picture with shapes and arrows called a flowchart.
 
@@ -162,7 +192,11 @@ An often surprising fact to tea novices is that all teas (Black, green, Oolong, 
 
 I drink green and black tea every day. Especially when I am using a code editor or when I have to create efficient algorithms.
 
-## Open Source Projects
+## Open Source / Projects
+
+In my spare time I work on open source and personal software projects. Also I am heavily interested in algorithmic trading and building full automatic trading software.
+
+Here is a little list of some software projects I am working on:
 
 {% capture projectlist %}
 {% for s in site.data.projects %}
@@ -177,17 +211,13 @@ I drink green and black tea every day. Especially when I am using a code editor 
 
 {{ projectlist }}
 
-You can find more projects in my [Github Account](https://github.com/arnegockeln){:target="_blank"}.
+In 2019 I decided to share my knowledge and meet with other great algorithmic trading adventurers. So I founded the [Algorithmic/Quantitative Trading Hamburg](https://www.meetup.com/de-DE/Algorithmic-Quantitative-Trading-Hamburg){:target="_blank"} Meetup. I would be happy to see you there!
 
 ## Standing Invitation
 
-In 2018 I moved to **Hamburg** and every day I look forward to new discoveries and contacts. I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business and software development, then I invite you to get in touch with me.
+In 2018 I moved to **Hamburg &#9875;** and every day I look forward to new discoveries and contacts. I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business and software development, then I invite you to get in touch with me.
 
-Especially if you are in **Hamburg**! Then I would also like to meet you personally. The first cup of tea or coffee is on me!
-
-{% capture socials %}
-{% for s in site.data.social %}<a href="{{ s.url }}" target="_blank">{{ s.css }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
-{% endcapture %}
+Especially if you are in Hamburg! Then I would also like to meet you personally. The first cup of tea or coffee is on me!
 
 You can shoot me a message on {{ socials }} or by good old email: sayhi@gockeln.com.
 
