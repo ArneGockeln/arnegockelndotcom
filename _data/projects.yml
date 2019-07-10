@@ -1,7 +1,3 @@
-- name: "FX Calc"
-  desc: "This application is a tool to calculate forex position sizes as lots and units. It also shows how much margin is needed to open the position."
-  url: "https://github.com/ArneGockeln/fxcalc"
-  
 - name: "sublimetext-cmake"
   desc: "This project sets up Sublime Text 3 as C++ IDE with CMake Build System. It is possible to build right from ST3 with shortcut CMD+B."
   url: "https://github.com/ArneGockeln/sublimetext-cmake"
@@ -9,6 +5,10 @@
 - name: "qtstarter"
   desc: "C++/Qt5 starter project with cmake build system, QtQuick, QtWidgets, AppIcon, macOS bundle and macdeployqt support."
   url: "https://github.com/ArneGockeln/qtstarter"
+
+- name: "FX Calc"
+  desc: "This application is a tool to calculate forex position sizes as lots and units. It also shows how much margin is needed to open the position."
+  url: "https://github.com/ArneGockeln/fxcalc"
 
 - name: "xtbclient"
   desc: "The xtbclient lib is a C++14 class library that enables communication via sockets between your trading application and the XTB trading server."

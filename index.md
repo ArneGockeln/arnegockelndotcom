@@ -1,10 +1,10 @@
 ---
 layout: page
-title: I turn tea and algorithms into computer code
+title: I turn tea and algorithms into highly efficient custom software solutions.
 ---
 {% capture portrait %}
 <div class="wp-caption alignright">
-    <img src="{{ site.url }}/assets/images/arne_gockeln_portrait.jpg" alt="Portrait Arne Gockeln"/>
+    <img src="{{ site.url }}/assets/images/arne_gockeln_portrait.jpg" width="329" alt="Portrait Arne Gockeln"/>
     <p class="wp-caption-text">Arne Gockeln</p>
 </div>
 {% endcapture %}
@@ -34,6 +34,7 @@ As a freelancer I worked from small to large projects as a one man solution and 
 
 Some of my clients were
 
+- KADDI-LACK Die Dortmunder Lackmanufaktur
 - Ruhr24 GmbH & Co. KG
 - Wiethe Group GmbH
 - RTL Interactive GmbH
@@ -47,7 +48,9 @@ Some of my clients were
 
 I love the open source world and everything related to it. Mainly I work with **macOS and Linux**. My preferred **programming languages** are **C/C++, Swift, PHP and Bash**. I like to use the **Qt framework** or **AppKit** to develop desktop and mobile applications, but I'm also a fan of **ncurses, bash scripting and command line programs**. 
 
-## What are algorithms?
+{% include figure.html image="/uploads/072019/techstacklogos.png" w="1280" h="400" alt="TechStack Logos c++,qt,php,wordpress,debian,macos" %}
+
+## What are algorithms? 
 
 You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or swift.
 

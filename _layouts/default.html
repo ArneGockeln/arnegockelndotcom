@@ -5,15 +5,17 @@ layout: compress
 <html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-classic header-light header-small " data-effect="slideUp">
 <head>
     <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.url == "/index.html" %}
-    <meta name="description" content="This website is about Arne Gockeln, a software developer on macos and linux.">
-    <meta name="keywords" content="blog, software development, arne gockeln">
+    {% if page.url == "/" %}
+    <meta name="description" content="This website is about Arne Gockeln, a senior software developer and algorithmic adventurer.">
+    <meta name="keywords" content="custom software, web applications, arne gockeln">
     {% else %}
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     {% endif %}
     <meta name="author" content="Arne Gockeln">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <title>Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}</title>
     <link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" /><!-- For old IEs -->
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="{{ site.url }}/assets/favicon/favicon.ico"><!-- For new browsers - multisize ico  -->
