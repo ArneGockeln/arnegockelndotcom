@@ -17,9 +17,13 @@ layout: default
 {% if jekyll.environment == "production" %}
 {% unless page.comments == false %}
 <div class="entry-content">
-	<div id="disqus_thread"></div>
-	<script src="{{ site.url }}/assets/js/disqus.js"></script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div id="disqus_thread"></div>
+    <script src="{{ site.url }}/assets/js/disqus.js"></script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 {% endunless %}
+{% else %}
+<div class="entry-content">
+    <p><strong>Environment: {{ jekyll.environment }} - Disqus Comments not visible.</strong></p>
+</div>
 {% endif %}
