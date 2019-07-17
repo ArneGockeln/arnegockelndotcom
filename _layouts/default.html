@@ -15,6 +15,14 @@ layout: compress
     <meta name="keywords" content="{{ page.keywords }}">
     {% endif %}
     <meta name="author" content="Arne Gockeln">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}" />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% unless page.ogimage == "" %}{{ site.url }}/assets/images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg{% else %}{{ page.ogimage }}{% endunless %}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
     <meta http-equiv="Cache-Control" content="no-cache">
     <title>Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}</title>
     <link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" /><!-- For old IEs -->
