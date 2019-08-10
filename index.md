@@ -18,7 +18,7 @@ my name is **Arne Gockeln** and since the year 2000 I have been involved in **cu
 
 ## What can I do for you?
 
-I can help you transforming your business or project idea into beautiful **macOS desktop- or iOS mobile applications.** Also I can build high performance low maintenance **web applications** which are working cross-platform in any web browser.
+I can help you transforming your business or project idea into beautiful **macOS desktop- or iOS mobile applications** using the **Qt Framework**. Also I can build high performance low maintenance **web applications** which are working cross-platform in any web browser.
 
 If you need to I can connect **third party APIs** to your existing application. A common use case would be to connect to a **JSON API** and read or post some data.
 
@@ -46,13 +46,13 @@ Some of my clients were
 
 ## Technical Skills
 
-I love the open source world and everything related to it. Mainly I work with **macOS and Linux**. My preferred **programming languages** are **C/C++, Swift, PHP and Bash**. I like to use the **Qt framework** or **AppKit** to develop desktop and mobile applications, but I'm also a fan of **ncurses, bash scripting and command line programs**. 
+I love the open source world and everything related to it. Mainly I work with **macOS and Linux**. My preferred **programming languages** are **C/C++, Python, PHP and Bash**. I like to use the **Qt framework** to develop desktop and mobile applications, but I'm also a fan of **ncurses, bash scripting and command line programs**. 
 
 {% include figure.html image="/uploads/072019/techstacklogos.png" w="1280" h="400" alt="TechStack Logos c++,qt,php,wordpress,debian,macos" %}
 
 ## What are algorithms? 
 
-You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages c++ or swift.
+You can think of an algorithm as a recipe that describes the exact steps needed to solve a problem or reach a goal. A programming algorithm describes how to do something and the computer will do it exactly that way every time. But first you have to convert the algorithm into a language the computer will understand, like the programming languages C++ or Python.
 
 In the design process we can write an algorithm as a list of steps using text or as a picture with shapes and arrows called a flowchart.
 
@@ -154,10 +154,22 @@ for(var i = 0; i <= terms; i++) {
 {% endhighlight %}
 {% endcapture %}
 
+{% capture python %}
+{% highlight python %}
+// Fibonacci Sequence in Python
+def fib(n):
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+        print(a)
+{% endhighlight %}
+{% endcapture %}
+
 {% capture tabs %}
 <div class="tabs">
   <ul class="tab-titles">
       <li><a class="active">C++</a></li>
+      <li><a>Python</a></li>
       <li><a>PHP</a></li>
       <li><a>Swift</a></li>
       <li><a>JavaScript</a></li>
@@ -166,6 +178,9 @@ for(var i = 0; i <= terms; i++) {
   <div class="tab-content">
       <div>
         {{ cpp }}
+      </div>
+      <div>
+        {{ python }}
       </div>
       <div>
         {{ php }}
