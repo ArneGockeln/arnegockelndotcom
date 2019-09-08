@@ -16,7 +16,7 @@ My working environment is macOS 10.14, Qt 5.13 Open Source, Python 3.8 and Apple
 
 You need the Python3 developer files. I have installed them using brew. On macOS you can use
 
-```
+```plain
 $ brew install python3
 ```
 
@@ -38,7 +38,7 @@ def initialize(pc: PythonHandler):
 
 In your qmake .pro file you need to add the paths to your Python3 and pybind11 libs and include directory. Like this:
 
-```
+```plain
 PYTHON_VERSION=$$(PYTHON_VERSION)
 isEmpty( PYTHON_VERSION ) {
   win32:PYTHON_VERSION=38
@@ -155,7 +155,7 @@ void PythonController::load(const QString &file) {
 
 Ok, first I check if the python file exists. If not I emit a signal `fileDoesNotExist` and return. In the try block comes a bit magic. **If you do not add the python file path to the sys path, your module cannot be loaded. Because python is not aware of the module folder.** Instead you will get an error:
 
-```
+```plain
 libc++abi.dylib: terminating with uncaught exception of type pybind11::error_already_set: AttributeError: module 'test' has no attribute 'initialize'
 ```
 

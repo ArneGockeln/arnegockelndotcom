@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
 And the .pro file:
 
-```bash
+```plain
 QT -= gui
 QT += sql
 
@@ -86,7 +86,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 After compiling and running the program I've got an error message
 
-```bash
+```plain
 $ ./qtsqltest 
 QSqlDatabase: QMYSQL driver not loaded
 QSqlDatabase: available drivers: QSQLITE QODBC QODBC3 QPSQL QPSQL7
@@ -103,7 +103,7 @@ Now. After several **hours** of research, test and frustration I found the solut
 
 First, if not already done install the mysql-client with homebrew. 
 
-```bash
+```plain
 $ brew install mysql-client
 $ ll /usr/local/Cellar/mysql-client/
 total 0
@@ -118,7 +118,7 @@ Second, within your Qt Creator you open the sqldriver project for mysql. My Qt i
 
 Now add two lines to the `mysql.pro` file:
 
-```
+```plain
 TARGET = qsqlmysql
 
 HEADERS += $$PWD/qsql_mysql_p.h
@@ -144,7 +144,7 @@ If you wonder why there is no file in `build-mysql-Debug`, Qt Creator moves the 
 
 We need to copy the dylib to the correct location. That is `~/sourcecode/sdk/QtLatest/5.13.0/clang_64/plugins/sqldrivers/`.
 
-```
+```plain
 $ pwd
 ~/sourcecode/sdk/QtLatest/5.13.0
 $ cp Src/qtbase/plugins/sqldrivers/libqsqlmysql* clang_64/plugins/sqldrivers/
