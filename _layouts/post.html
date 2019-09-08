@@ -1,29 +1,35 @@
 ---
 layout: default
 ---
- <article class="hentry post single-post">
-    <!-- .entry-content -->
-    <div class="entry-content">
-    	{% unless page.has_featured %}
-    	<h1 class="entry-title">{{ page.title }}</h1>
-    	Posted on {{ page.date | date: "%d. %B %Y" }} in [{% for category in page.categories %}
-            <a href="{{ site.url }}/{{ category }}">{{ category }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
-        {% endfor %}]
-    	{% endunless %}
-    	{{ content }}
-	</div>
-</article>
 
-{% if jekyll.environment == "production" %}
-{% unless page.comments == false %}
-<div class="entry-content">
-    <div id="disqus_thread"></div>
-    <script src="{{ site.url }}/assets/js/disqus.js"></script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-{% endunless %}
-{% else %}
-<div class="entry-content">
-    <p><strong>Environment: {{ jekyll.environment }} - Disqus Comments not visible.</strong></p>
-</div>
+<h1>
+  {{ page.title }}
+</h1>
+
+{% if page.image %}
+  <img src="{{ site.github.url }}/uploads/{{ page.image }}">
 {% endif %}
+
+{{ content }}
+
+<span class="post-date">
+  {{ site.data.settings.post_date_prefix }}
+  {% assign d = page.date | date: "%-d"  %}
+  {{ page.date | date: "%B" }}
+  {% case d %}
+    {% when '1' or '21' or '31' %}{{ d }}st
+    {% when '2' or '22' %}{{ d }}nd
+    {% when '3' or '23' %}{{ d }}rd
+    {% else %}{{ d }}th{% endcase %},
+  {{ page.date | date: "%Y" }}
+  by
+  {% if page.author %}
+    {{ page.author }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
+</span>
+
+{% include social-sharing.html %}
+
+{% include disqus.html %}

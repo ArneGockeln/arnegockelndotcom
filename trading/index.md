@@ -8,4 +8,4 @@ pagination:
     category: trading
     permalink: /:num/
 ---
-{% include category-pagination.html %}
+{% include paginator.html %}

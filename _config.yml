@@ -16,6 +16,9 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arnegockeln.com" # the base hostname & protocol for your site, e.g. http://example.com
 default_title: "Algorithmic Adventurer"
+default_description: "This website is about Arne Gockeln, a senior software developer and algorithmic adventurer."
+head_title: "AG"
+head_desc: "Algorithmic Adventurer"
 
 # Build settings
 markdown: kramdown

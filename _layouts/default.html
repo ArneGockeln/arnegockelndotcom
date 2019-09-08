@@ -2,30 +2,45 @@
 layout: compress
 ---
 <!doctype html>
-<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-classic header-light header-small " data-effect="slideUp">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.url == "/" %}
-    <meta name="description" content="This website is about Arne Gockeln, a senior software developer and algorithmic adventurer.">
-    <meta name="keywords" content="custom software, web applications, arne gockeln">
-    {% else %}
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
-    {% endif %}
-    <meta name="author" content="Arne Gockeln">
-    <!-- Open Graph -->
+    <title>Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}</title>
+  <!-- Open Graph -->
     <meta property="og:title" content="Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}" />
     <meta property="og:url" content="{{ page.url }}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{% unless page.ogimage == "" %}{{ site.url }}/assets/images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg{% else %}{{ page.ogimage }}{% endunless %}" />
-    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:description" content="{% unless page.description == "" %}{{ site.default_description }}{% else %}{{ page.description }}{% endunless %}" />
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <title>Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}</title>
-    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" /><!-- For old IEs -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  {% if page.url == "/" %}
+  <meta name="description" content="{{ site.default_description }}">
+  <meta name="keywords" content="custom software, software developer, arne gockeln">
+  {% else %}
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <meta name="author" content="Arne Gockeln">
+
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/align.css">
+  <!-- Use Atom -->
+  {% feed_meta %}
+  <!-- Use RSS-2.0 -->
+  <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" /><!-- For old IEs -->
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="{{ site.url }}/assets/favicon/favicon.ico"><!-- For new browsers - multisize ico  -->
     <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/assets/favicon/favicon-152-precomposed.png"><!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
     <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/favicon/favicon-144-precomposed.png"><!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
@@ -39,165 +54,41 @@ layout: compress
     <meta name="msapplication-TileImage" content="{{ site.url }}/assets/favicon/favicon-144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" sizes="192x192" href="{{ site.url }}/assets/favicon/favicon-192.png">
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
-    <!-- STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/fonts/fontello/css/fontello.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/jquery.fluidbox/fluidbox.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/align.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/js/shortcodes/shortcodes.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/768.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/992.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/syntax.css">
-    <!-- INITIAL SCRIPTS -->
-	<script src="{{ site.url }}/assets/js/modernizr.min.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!-- Use Jekyll SEO plugin -->
+  {% seo %}
 </head>
-<body class="{% if page.is_post == true or page.has_featured %}single{% elsif page.is_post == false %}page{% endif %}">
-	<!-- page -->
-    <div id="page" class="hfeed site">
-        <!-- header -->
-        <header id="masthead" class="site-header" role="banner">
-            <!-- site-navigation -->
-            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                <!-- layout-medium -->
-                <div class="layout-medium">
-                    <a class="menu-toggle"><span class="lines"></span></a>
-                    <!-- nav-menu -->
-                    <div class="nav-menu">
-                        <ul>
-                            {% for n in site.data.mainnav %}
-                            <li>
-                                <a href="{{ n.url|prepend: site.url }}">{{ n.text }}</a>
-                                {% if n.sub %}
-                                <ul>
-                                {% for ns in n.sub %}
-                                    <li><a href="{{ ns.url|prepend: site.url }}">{{ ns.text }}</a></li>
-                                {% endfor %}
-                                </ul>
-                                {% endif %}
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% unless page.url == "/" %}
-                    <!-- nav-menu -->
-                    <a class="search-toggle toggle-link"></a>
-                    <!-- search-container -->
-                    <div class="search-container">
-                        <div class="search-box" role="search">
-                            <form class="search-form">
-                                <label>Search Here
-                                    <input type="search" id="search-field" placeholder="type to search" name="s">
-                                </label>
-                                <ul id="results-container">
-                                </ul>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- search-container -->
-                    {% endunless %}
-                </div>
-                <!-- layout-medium -->
-            </nav>
-            <!-- site-navigation -->	
-        </header>
-        <!-- site-main -->
-        <div id="main" class="site-main">
-        	{% if page.has_featured %}
-                {% if page.featuredtitle %}
-                {% assign ftitle = page.featuredtitle %}
-                {% else %}
-                {% assign ftitle = page.title %}
-                {% endif %}
-        		{% include featured-top.html title=ftitle image=page.featuredimage datetime=page.date %}
-    		{% endif %}
-        	<div class="layout-fixed"> 
-            	<div id="primary" class="content-area">
-                    <!-- site-content -->
-                    <div id="content" class="site-content" role="main">
-                        <!-- GDPR -->
-                        <div class="alert hide" id="gdpralert">
-                            <h3>This website uses cookies</h3>
-                            <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website. Read all about our <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR here.</a></p>
-                            <p><span class="close btn-agree" style="font-size: 1.2em;cursor:pointer;">I agree</span></p>
-                        </div>
-                		{{ content }}
-                    </div>
-                    <!-- site-content -->
-            	</div>
-                <!-- primary -->
-            </div>
-            <!-- layout -->
+<body>
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="{{ site.github.url }}/">{{ site.head_title }}</a>
+    <small class="masthead-subtitle">{{ site.head_desc }}</small>
+    {% include menu.html %}
+  </h3>
+</header>
+
+    <div class="post-container">
+        <!-- GDPR -->
+        <div class="alert hide" id="gdpralert">
+            <h3>This website uses cookies</h3>
+            <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website. Read all about our <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR here.</a></p>
+            <p><span class="close btn-agree" style="font-size: 1.2em;cursor:pointer;">I agree</span></p>
         </div>
-        <!-- site-main -->
-        <!-- site-footer -->
-        <footer id="colophon" class="site-footer" role="contentinfo">
-            <!-- layout-medium -->
-            <div class="layout-medium">
-                <!-- footer-social -->
-                <div class="footer-social">
-                    <div class="textwidget">
-                        {% for s in site.data.social %}
-                    	<a class="social-link {{ s.css }}" href="{{ s.url }}" target="_blank"></a>
-                    	{% endfor %}
-                    </div>
-                </div>
-                <!-- footer-social -->
-            </div>
-            <!-- layout-medium -->
-            <!-- .site-info -->
-            <div class="site-info">
-                <!-- layout-medium -->
-            	<div class="layout-medium">
-            		<div class="textwidget">Software <em>craftsmanship</em> with <i class="pw-icon-heart"></i> and passion in Hamburg.</div>
-            		<div class="textwidget"><a href="{{ site.url }}/impressum.html">Imprint (German)</a> | <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR</a>
-                </div>
-            	<!-- layout-medium -->
-            </div>
-            <!-- .site-info -->
-		</footer>
-        <!-- site-footer -->
-	</div>
-    <!-- page -->
-    <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-	   if (!window.jQuery) { 
-		  document.write('<script src="{{ site.url }}/assets/js/jquery-3.1.1.min.js"><\/script>'); 
-	   }
-	</script>
-    <script src="{{ site.url }}/assets/js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="{{ site.url }}/assets/js/fastclick.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.fitvids.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.viewport.mini.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.waypoints.min.js"></script>
-    <script src="{{ site.url }}/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.fluidbox/jquery.fluidbox.min.js"></script>
-    <script src="{{ site.url }}/assets/js/main.js"></script>
-    <script src="{{ site.url }}/assets/js/shortcodes/shortcodes.js"></script>
-    <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
-    {% if page.is_post %}
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    {% endif %}
-   {% unless page.url == "/" %}
-    <script>
-      window.simpleJekyllSearch = new SimpleJekyllSearch({
-        searchInput: document.getElementById('search-field'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.url }}/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: false,
-        exclude: ['Welcome']
-      })
+       if (!window.jQuery) { 
+          document.write('<script src="{{ site.url }}/assets/js/jquery-3.1.1.min.js"><\/script>'); 
+       }
     </script>
-    {% endunless %}
-    {% if jekyll.environment == "production" %}
+{% if jekyll.environment == "production" %}
     <script type="text/javascript">
       var _paq = window._paq || [];
       _paq.push(['requireConsent']);

@@ -8,4 +8,4 @@ pagination:
     category: business
     permalink: /:num/
 ---
-{% include category-pagination.html %}
+{% include paginator.html %}
