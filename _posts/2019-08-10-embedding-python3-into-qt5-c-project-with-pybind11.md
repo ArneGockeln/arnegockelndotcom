@@ -4,6 +4,8 @@ title: "Embedding Python3 into Qt5 C++ project with pybind11"
 date: 2019-08-10 18:14:57 +0200
 author: Arne Gockeln
 categories: [softwaredev]
+image: /082019/hitesh-choudhary-D9Zow2REm8U-unsplash.jpg
+imagecopyright: "Photo by Hitesh Choudhary on Unsplash"
 ---
 
 The project I am working on right now requires an embedded python interpreter where you can load python scripts and the software reacts to it.

@@ -6,6 +6,8 @@ author: Arne Gockeln
 categories: [trading]
 keywords: "backtesting, trading system, profit factor"
 description: "the key figures to check if a trading system is profitable or not"
+image: /072019/austin-distel-DfjJMVhwH_8-unsplash.jpg
+imagecopyright: "Photo by Austin Distel on Unsplash"
 ---
 If you are backtesting your trading strategy you need some key figures to determine if your system is profitable or not. It doesn't matter if you are testing a manual strategy or an automatic system. You need at least these eight key figures before you are going live and risk your money.
 

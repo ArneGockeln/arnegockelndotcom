@@ -6,6 +6,8 @@ author: Arne Gockeln
 categories: [softwaredev]
 keywords: "qt, qmysql, macOS"
 description: "How to connect to mysql server with Qt 5.13 on macOS Mojave."
+image: /072019/tobias-fischer-PkbZahEG2Ng-unsplash.jpg
+imagecopyright: "Photo by Tobias Fischer on Unsplash"
 ---
 Today I went crazy because I tried to connect to a mysql server, running inside a MAMP session, using Qt 5.13 on macOS Mojave. 
 

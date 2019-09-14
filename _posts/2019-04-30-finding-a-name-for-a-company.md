@@ -6,6 +6,8 @@ author: Arne Gockeln
 categories: [business]
 keywords: "business, names"
 description: "My process to generate a new business name"
+image: /042019/austin-chan-ukzHlkoz1IE-unsplash.jpg
+imagecopyright: "Photo by Austin Chan on Unsplash"
 ---
 For my next business I needed a name which is not already in use, where all domain names are free to register and which is under 100,000 search results on google. Also the name should be easy to remember and to speak. So the name should not be longer than 15 characters. Ah, and don't forget the social media handles for twitter, facebook, instagram and youtube. I am looking only for .de and .com top level domains.
 

@@ -6,6 +6,8 @@ author: Arne Gockeln
 categories: [trading]
 keywords: "forex, trading, position size"
 description: "A tutorial to calculate the forex position size."
+image: /032019/stellrweb-djb1whucfBY-unsplash.jpg
+imagecopyright: "Photo by StellrWeb on Unsplash"
 ---
 
 If you go for manual forex trading you need to calculate the correct position size. The position size and margin requirement depends on your risk and money management and needs to be calculated for every trade again.

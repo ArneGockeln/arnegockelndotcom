@@ -28,6 +28,7 @@ layout: default
   {% else %}
     {{ site.author }}
   {% endif %}
+  {% if page.imagecopyright %}/ {{ page.imagecopyright }}{% endif %}
 </span>
 
 {% include social-sharing.html %}
