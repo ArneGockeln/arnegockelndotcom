@@ -120,6 +120,18 @@ hr {
   color: #505050;
 }
 
+h3.masthead-title > a {
+  background-color: #505050;
+  color: white;
+  padding: 0px 7px;
+  font-family: 'Megrim', cursive;
+  font-weight: 400;
+}
+h3.masthead-title > a:hover {
+  color: white;
+  cursor: none;
+}
+
 .masthead-subtitle {
   color: #999;
 }
