@@ -530,3 +530,16 @@ th, td {
 figure {
   margin-left: -50%;
 }
+
+/**
+ * GDPR alert
+ */
+#gdpralert {
+  border: 1px solid #cccccc;
+  background-color: #eaeaea;
+  padding: 0 8px;
+}
+#gdpralert .btn-agree {
+  border: 1px solid #999;
+  padding: 0 8px;
+}
