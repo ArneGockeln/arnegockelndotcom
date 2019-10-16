@@ -2,5 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 .sublime-workspace
+.bundle
 Gemfile.lock
 Thumbs.db
+vendor

@@ -66,6 +66,7 @@ exclude:
   - arnegockeln.sublime-workspace
   - arnegockeln.sublime-project
   - README.md
+  - vendor
 
 jekyll-minifier:
   remove_comments: true
