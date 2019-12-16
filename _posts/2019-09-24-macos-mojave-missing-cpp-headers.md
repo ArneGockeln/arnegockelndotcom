@@ -48,6 +48,8 @@ If you get an error that states that the command does not exist, you probably ne
 $ xcode-select --install
 ```
 
+**Note:** If you still do not find the pkg file, you need to download the latest command line tools from [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/). Got that problem again after updating macOS Mojave to macOS Catalina.
+
 Here is the build result:
 
 ```plain

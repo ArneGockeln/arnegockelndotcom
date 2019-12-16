@@ -13,7 +13,7 @@ title: About me
 
 ## Hi
 {{ portrait }}
-my name is **Arne Gockeln** and I started software development in 1990. Since the year 2000 I have been involved in **professional custom software, linux and web development**, founding business ideas and working as a freelancer. Currently I am working as a Software Developer at [**Star Finanz**](https://www.starfinanz.de/){:target="_blank"} in Hamburg.
+my name is **Arne Gockeln** and I started software development in 1990. Since the year 2000 I have been involved in **professional custom software, linux and web development**, founding business ideas and working as a freelancer. 
 
 ## Freelance Work
 
