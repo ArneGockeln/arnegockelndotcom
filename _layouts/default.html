@@ -22,8 +22,12 @@ layout: compress
   <meta name="description" content="{{ site.default_description }}">
   <meta name="keywords" content="custom software, software developer, arne gockeln">
   {% else %}
+    {% if page.description != nil %}
   <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.keywords != nil %}
   <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
   {% endif %}
   <meta name="author" content="Arne Gockeln">
 

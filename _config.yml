@@ -16,7 +16,7 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arnegockeln.com" # the base hostname & protocol for your site, e.g. http://example.com
 default_title: "Algorithmic Adventurer"
-default_description: "This website is about Arne Gockeln, a senior software developer and algorithmic adventurer."
+default_description: "This website is about Arne Gockeln, a senior software developer and price action futures trader."
 head_title: "AG"
 head_desc: "Algorithmic Adventurer"
 
@@ -67,6 +67,7 @@ exclude:
   - arnegockeln.sublime-project
   - README.md
   - vendor
+  - _theme
 
 jekyll-minifier:
   remove_comments: true
