@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
+header: small
 tag: business
-permalink: /business/
-title: "Business"
+permalink: /blog/business/
+title: "Blog / Business"
 pagination: 
     enabled: true
     category: business

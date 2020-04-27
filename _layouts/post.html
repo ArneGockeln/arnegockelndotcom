@@ -1,33 +1,62 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<!-- CONTAINER -->
+<div class="content container">
 
-{% if page.image %}
-  <img src="{{ site.github.url }}/uploads/{{ page.image }}">
-{% endif %}
+  <div class="row">
+    <div class="col-md-9 col-sm-8 posts">
 
-{{ content }}
+      <!-- POST: Image -->
+      <div class="post {% if page.image %}format-image{% endif %}">   
+        <div class="meta">
+          <div class="date">{{ page.date | date_to_string }}</div>
+          <p>von <a href="" class="author">{% if page.author %}
+            {{ page.author }}
+            {% else %}
+            {{ site.author }}
+          {% endif %}</a></p>
+          <p>in {% for cat in page.categories %}<a href="{{ site.url }}/blog/{{ cat }}">{{ cat }}</a>{% endfor %}</p>
+        </div>
 
-<span class="post-date">
-  {{ site.data.settings.post_date_prefix }}
-  {% assign d = page.date | date: "%-d"  %}
-  {{ page.date | date: "%B" }}
-  {% case d %}
-    {% when '1' or '21' or '31' %}{{ d }}st
-    {% when '2' or '22' %}{{ d }}nd
-    {% when '3' or '23' %}{{ d }}rd
-    {% else %}{{ d }}th{% endcase %},
-  {{ page.date | date: "%Y" }}
-  by
-  {% if page.author %}
-    {{ page.author }}
+        {% if page.image %}
+        <div class="row slider oneslider magnific-wrap">
+          <ul>
+            <li>
+              <img src="{{ site.github.url }}/uploads/{{ page.image }}">
+              {% if page.imagecopyright %}{{ page.imagecopyright }}{% endif %}
+            </li>
+          </ul>
+        </div>
+        {% endif %}
+
+        {{ content }}
+
+        {% include social-sharing.html %}
+
+        {% include comments.html %}
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+        <!-- .widget -->
+        <div class="widget">
+          <h5>Kategorie</h5>
+          <ul class="category-list flat">
+{% assign categories_list = site.categories %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+      <li><a href="{{ site.url }}/blog/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a></li>
+    {% endfor %}
   {% else %}
-    {{ site.author }}
+    {% for category in categories_list %}
+      <li><a href="{{ site.url }}/blog/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a></li>
+    {% endfor %}
   {% endif %}
-  {% if page.imagecopyright %}/ {{ page.imagecopyright }}{% endif %}
-</span>
-
-{% include social-sharing.html %}
-
-{% include comments.html %}
+{% assign categories_list = nil %}
+</ul>
+        </div>
+        <!-- /.widget -->
+    </div>
+  </div>
+</div>

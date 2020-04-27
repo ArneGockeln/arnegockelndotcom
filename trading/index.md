@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
+header: small
 tag: trading
-title: "Trading"
-permalink: /trading/
+title: "Blog / Trading"
+permalink: /blog/trading/
 pagination:
     enabled: true
     category: trading

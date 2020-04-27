@@ -167,6 +167,4 @@ That is a lot of math for one trade and as the markets are fast in lower timefra
 
 ![FX Calc Screenshot]({{ site.url }}/uploads/032019/fxcalc_screenshot.png)
 
-{% include paddle.html productname="FX Calculator" productid="555206" %}
-
-Or you can download the source code of [FX Calculator on github](https://github.com/arnegockeln/fxcalc){:target="_blank"} and compile it yourself. 
+You can download the source code of [FX Calculator on github](https://github.com/arnegockeln/fxcalc){:target="_blank"} and compile it yourself. 

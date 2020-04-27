@@ -1,0 +1,16 @@
+Denver - Responsive Multipurpose Template
+
+Version 1.2 (April 08, 2015) 
+--- 
+Bugfix. Fade Out adaptive modal menu in the onepage.html after touch/click item.
+Bugfix. In the onepage.html after clicking first item, window scroll top to 0.
+
+Version 1.1 (March 11, 2015) 
+--- 
+Added. Project title name without mouse hover.
+Bugfix. X this dismiss the search box doesn't work on iOS 8.
+Edited. Documentation.
+
+Version 1.0 (March 03, 2015)
+---
+First Release 

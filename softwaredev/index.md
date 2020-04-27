@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
+header: small
 tag: softwaredev
-permalink: /softwaredev/
-title: "Software Development"
+permalink: /blog/softwaredev/
+title: "Blog / Softwareentwicklung"
 pagination: 
     enabled: true
     category: softwaredev

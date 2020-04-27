@@ -1,7 +1,201 @@
 ---
-layout: page
-pagination: 
-    enabled: true
-    permalink: /:num/
+layout: default
+bodycss: home
 ---
-{% include paginator.html %}
+<!-- SLIDER -->
+  <div class="slider oneslider slider-fwd topfwd-slider">
+    <ul data-auto="true">
+      <li class="bg-slide" style="background-image: url(http://denver.aisconverse.com/images/bg/business-3.jpg);">
+        <div class="container fullheight">
+          <div class="bus-descr animate right-bottom-extra-pos" data-animate="fadeInUp">
+            <h4>Denver Business</h4>
+            <p>Viverra proin sapien fringilla vestibulum condimentum, magna ametproin, eros feugiat odit condimentum.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-slide bg-top" style="background-image: url(http://denver.aisconverse.com/images/bg/business-1.jpg);">
+        <div class="container fullheight">
+          <div class="bus-descr animate left-bottom-pos" data-animate="fadeInLeft">
+            <h4>Company Services</h4>
+            <p>Viverra proin sapien fringilla vestibulum condimentum, magna ametproin, eros feugiat odit condimentum.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-slide" style="background-image: url(http://denver.aisconverse.com/images/bg/business-2.jpg);">
+        <div class="container fullheight">
+          <div class="bus-descr animate right-bottom-pos" data-animate="fadeInRight">
+            <h4>Company Strategy</h4>
+            <p>Viverra proin sapien fringilla vestibulum condimentum, magna ametproin, eros feugiat odit condimentum.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="slider-nav">
+      <a href="" class="prev square">&larr;</a>
+      <nav class="nav-pages"></nav>
+      <a href="" class="next square">&rarr;</a>
+    </div>
+  </div>
+  <!-- /.slider -->
+
+  <!-- CONTAINER -->
+  <div class="content container">
+
+    <!-- GDPR -->
+    <div class="alert hide" id="gdpralert">
+        <h3>This website uses cookies</h3>
+        <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website. Read all about our <a href="{{ site.url }}/privacypolicy.html">Privacy Policy / GDPR here.</a></p>
+        <p><span class="close btn-agree" style="font-size: 1.2em;cursor:pointer;">I agree</span></p>
+    </div>
+      
+
+    <div class="row irow">
+      <div class="col-sm-4">
+        <h3>About Company <small>&mdash;</small></h3>
+      </div>
+      <div class="col-sm-8">
+        <p class="lead">Quisque consequat dolor nulla lacus vivamus, feugiat massa, laboris eget leo odio rutrum donec dolor. Fermentum dignissim neque quisque sit adipiscing.</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="row irow text-center">
+      <div class="col-sm-4">
+        <img src="{{ site.url }}/assets/images/icons/ico-cup.png" alt="" class="img-icon">
+        <h4>Modeling</h4>
+        <p>Viverra proin sapien fringilla vestibulum condimentum, magna amet neque et, porta condim.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="{{ site.url }}/assets/images/icons/ico-image.png" alt="" class="img-icon">
+        <h4>Photography</h4>
+        <p>Quisque consequat dolor nulla lacus vivamus, feugiat massa a, laboris eget leo odio rutrum donec dolor.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="{{ site.url }}/assets/images/icons/ico-video.png" alt="" class="img-icon">
+        <h4>Video Production</h4>
+        <p>Habitasse phasellus odio suspendisse a odio, maecenas tellus cursus, id sed vitae pellentesque.</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="row irow pricing">
+      <div class="col-md-3 col-sm-6">
+        <h3>Simple</h3>
+        <div class="num"><sup>$</sup>0</div>
+        <p class="text-muted">Per month</p>
+        <hr/>
+        <p>Project Scoping <br/>
+          &mdash; <br/>
+          Process Planning <br/>
+          Project management <br/>
+          &mdash; <br/>
+          &mdash;
+        </p>
+        <a href="" class="btn btn-default">Free Trial</a>
+      </div>
+      <div class="col-md-3 col-sm-6 bg-primary">
+        <div class="most">Most Popular</div>
+        <h3>Personal</h3>
+        <div class="num"><sup>$</sup>25</div>
+        <p>Per month</p>
+        <hr/>
+        <p>Graphic design <br/>
+          &mdash; <br/>
+          User Experience design <br/>
+          Search Engine <br/>
+          &mdash; <br/>
+          Authoring
+        </p>
+        <a href="" class="btn btn-inverse">Order Now</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h3>Bussiness</h3>
+        <div class="num"><sup>$</sup>75</div>
+        <p class="text-muted">Per month</p>
+        <hr/>
+        <p>Filmmaking <br/>
+          Television Production <br/>
+          Sound Recording <br/>
+          Sound Reproduction <br/>
+          &mdash; <br/>
+          Performance
+        </p>
+        <a href="" class="btn btn-default">Order Now</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h3>Premium</h3>
+        <div class="num"><sup>$</sup>240</div>
+        <p class="text-muted">Per month</p>
+        <hr/>
+        <p>Unlimited Templates <br/>
+          Unlimited Color Schemes <br/>
+          100 Gb Storage Space <br/>
+          Custom Domain <br/>
+          Sound Reproduction <br/>
+          Performance
+        </p>
+        <a href="" class="btn btn-default">Order Now</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- SLIDER -->
+    <div class="row slider logotypes">
+      <ul>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-1.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-2.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-3.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-4.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-2.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-1.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-4.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-2.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-3.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-4.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-2.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="http://denver.aisconverse.com/images/logo/logo-3.png" alt=""></a>
+        </li>
+      </ul>
+      <div class="slider-nav">
+        <a href="" class="prev">&larr;</a>
+        <nav class="nav-pages"></nav>
+        <a href="" class="next">&rarr;</a>
+      </div>
+    </div>
+    <!-- /.slider -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- PROMO -->
+  <div class="promo">
+    <h3>Denver multipurpose template —</h3>
+    <a href="" class="btn btn-default">Purchase</a>
+  </div>
+  <!-- /.promo -->
