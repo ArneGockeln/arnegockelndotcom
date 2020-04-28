@@ -3676,7 +3676,7 @@ form fieldset + .checkbox {
 }
 
 .pricing [class*=col-].bg-primary p {
-	color: #8C8C8C;
+	color: #EAEAEA;
 }
 
 .pricing [class*=col-].bg-primary .num,

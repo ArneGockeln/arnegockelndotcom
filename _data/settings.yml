@@ -3,10 +3,10 @@ menu:
   url: '/index.html'
 - name: 'Software'
   sub:
-    - name: 'Beratung'
-      url: '/softwareberatung.html'
     - name: 'Entwicklung'
       url: '/softwareentwicklung.html'
+#    - name: 'Schulung'
+#      url: '/softwareschulung.html'
     - name: 'Artikel'
       url: '/blog/softwaredev'
 - name: 'Trading'
