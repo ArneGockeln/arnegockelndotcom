@@ -6248,6 +6248,15 @@ h4 + .products {
 	background-color: #212121;
 }
 
+#gdpralert {
+	background-color: #ffffff;
+	padding: 4px;
+}
+#gdpralert span.btn-agree {
+	margin: 4px 0;
+	cursor: pointer;
+}
+
 /*------------------------------------------------------------------
 [ RESPONSIVE ]
 -------------------------------------------------------------------*/

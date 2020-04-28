@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +9,7 @@
     <meta property="og:title" content="Arne Gockeln | {% unless page.url == "/" %}{% if page.title.size > 0 %}{{ page.title }}{% else %}{{ site.default_title }}{% endif %}{% endunless %}{% if page.url == "/" %}{{ site.default_title }}{% endif %}" />
     <meta property="og:url" content="{{ page.url }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="{% unless page.ogimage == "" %}{{ site.url }}/assets/images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg{% else %}{{ page.ogimage }}{% endunless %}" />
+    <meta property="og:image" content="{% unless page.ogimage == "" %}{{ site.url }}/assets/images/domoreheader.jpg{% else %}{{ page.ogimage }}{% endunless %}" />
     <meta property="og:description" content="{% unless page.description == "" %}{{ site.default_description }}{% else %}{{ page.description }}{% endunless %}" />
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
@@ -17,7 +20,7 @@
 
   {% if page.url == "/" %}
   <meta name="description" content="{{ site.default_description }}">
-  <meta name="keywords" content="custom software, software developer, arne gockeln">
+  <meta name="keywords" content="custom software, Softwareentwicklung, webentwicklung, wordpress, price action trader, arne gockeln">
   {% else %}
     {% if page.description != nil %}
   <meta name="description" content="{{ page.description }}">
@@ -66,6 +69,9 @@
 {{ post.header }}
 <header class="header {% if pheader != nil %} header-{{ pheader }} {% else %}no-bg no-skin{% endif %}">
   <nav class="navbar-fixed-top navbar" data-offset-top="84" data-spy="affix">
+      <div class="hide" id="gdpralert">
+      <p>Um Ihnen ein optimales Online-Erlebnis bieten zu können, verwenden wir Cookies. Mit dem Weitersurfen stimmen Sie unseren <a href="{{ site.url }}/datenschutz.html">Datenschutzrichtlinien</a> zu. <span class="close btn-agree">OK</span></p>
+  </div>
     <div class="container">
       <a class="navbar-brand" href="{{ site.url }}/index.html">Arne Gockeln.</a>
       <button class="navbar-toggle menu-toggle" type="button">
@@ -156,30 +162,9 @@
 <script src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
 <script src="{{ site.url }}/assets/js/plugins.js"></script>
 <script src="{{ site.url }}/assets/js/custom.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/tracking.js"></script>
 {% if jekyll.environment == "production" %}
-  <script type="text/javascript">
-    var _paq = window._paq || [];
-    _paq.push(['requireConsent']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="https://analytics.gockeln.com/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '7']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-    function checkGDPR() {
-      if ( document.cookie.indexOf('mtm_consent=') == -1 ) {
-          $('div#gdpralert').slideDown().removeClass('hide');
-      }
-    }
-    checkGDPR();
-    $('div#gdpralert span.btn-agree').on('click', function(e) {
-      _paq.push(['rememberConsentGiven']);
-      $('#gdpralert').slideUp();
-    });
-  </script>
+  
 {% endif %}
 </body>
 </html>
