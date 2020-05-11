@@ -1,0 +1,32 @@
+<!-- Intro Title Section 1 -->
+<!-- Options:
+    include.title = the h1 title
+    include.subtitle = the subtitle
+    include.color = foreground color
+    include.gradient = background color: purple-haze, royal-garden, norse-beauty
+-->
+<div class="section-block intro-title-1 small {% if include.gradient != nil %}bkg-gradient-{{ include.gradient }}{% endif %} {% if include.color != nil %}color-{{ include.color }}{% endif %}">
+    <div class="row">
+        <div class="column width-12">
+            <div class="title-container">
+                <div class="title-container-inner">
+                    <div class="row flex">
+                        <div class="column width-6 v-align-middle">
+                            <div>
+                                {% if include.title != nil %}
+                                <h1 class="mb-0">{{ include.title }}</h1>
+                                {% else %}
+                                <h1 class="mb-0">include.title is nil</h1>
+                                {% endif %}
+                                {% if include.subtitle != nil %}
+                                <p class="lead mb-0 mb-mobile-20">{{ include.subtitle }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro Title Section 1 End -->

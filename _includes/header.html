@@ -1,0 +1,54 @@
+{% if jekyll.environment == "production" %}
+<div class="header-inner-top hide" id="gdpralert">
+    <div class="nav-bar">
+        <div class="row flex">
+            <div class="column width-10 nav-bar-inner v-align-middle left">
+                <div>
+                    <p>Um Ihnen ein optimales Online-Erlebnis bieten zu können, verwenden wir Cookies. Mit dem Weitersurfen stimmen Sie unseren <a href="{{ site.url }}/datenschutz.html">Datenschutzrichtlinien</a> zu.</p>
+                </div>
+            </div>
+            <div class="column width-2 nav-bar-inner v-align-middle right">
+                <div>
+                    <span class="close btn-agree right" style="cursor:pointer;">OK</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<div class="header-inner">
+    <div class="row nav-bar">
+        <div class="column width-12 nav-bar-inner">
+            <div class="row">
+                <div class="column width-5 primary-nav-column">
+                    <nav class="navigation nav-block primary-navigation nav-right sub-menu-indicator">
+                        {% include navi.html list=site.data.settings.mainleft %}
+                    </nav>
+                </div>
+                <div class="column width-2 logo-column">
+                    <div class="logo logo-center">
+                        <div class="logo-inner">
+                            <a href="index.html"><img src="{{ site.url }}/assets/images/logo-dark.png" alt="Arne Gockeln Logo" /></a>
+                            <a href="index.html"><img src="{{ site.url }}/assets/images/logo.png" alt="Arne Gockeln Logo" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column width-5 secondary-nav-column">
+                    <nav class="navigation nav-block primary-navigation nav-left sub-menu-indicator">
+                        {% include navi.html list=site.data.settings.mainright %}
+                    </nav>
+                    <nav class="navigation nav-block secondary-navigation nav-right">
+                        <ul>
+                            <li class="aux-navigation hide">
+                                <!-- Aux Navigation -->
+                                <a href="#" class="navigation-show side-nav-show nav-icon">
+                                    <span class="icon-menu"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

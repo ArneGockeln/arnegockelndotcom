@@ -1,0 +1,14 @@
+<ul>
+    {% for s in include.list %}
+    <li {% if s.sub != nil %}class="contains-sub-menu{% if page.url == s.url or page.url == '/' and s.url == '/index.html' %} current{% endif %}"{% endif %}>
+      <a href="{{ site.url }}{{ s.url }}">{{ s.name }}</a>
+      {% if s.sub != nil %}
+      <ul class="sub-menu">
+        {% for sub in s.sub %}
+        <li><a href="{{ site.url }}{{ sub.url }}">{{ sub.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
