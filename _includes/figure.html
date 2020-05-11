@@ -1,7 +1,0 @@
-{% capture t %}<!-- 
-call it like this:
-    { % include figure.html image="url/to/image.png" w="1600" h="1200" caption="Beach at Big Sur" alt="Big sur" % }
--->{% endcapture %}
-<figure {% if include.w != '' %}style="width: {{ include.w }}px;"{% endif %} class="{% if include.caption != '' %}wp-caption {% endif %}aligncenter">
-	<img src="{{ include.image }}" {% if include.alt != '' %}alt="{{ include.alt }}"{% endif %} {% if include.w != '' %} width="{{ include.w }}"{% endif %} {% if include.h != '' %}height="{{ include.h }}"{% endif %}>{% unless include.caption == blank %}<figcaption class="wp-caption-text">{{ include.caption }}</figcaption>{% endunless %}
-</figure>

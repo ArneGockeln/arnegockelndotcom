@@ -36,7 +36,7 @@ def initialize(pc: PythonHandler):
     pc.debug("print initialize")
 ```
 
-## Pro file
+## .pro file
 
 In your qmake .pro file you need to add the paths to your Python3 and pybind11 libs and include directory. Like this:
 

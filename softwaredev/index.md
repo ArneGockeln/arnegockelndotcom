@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: category
 header: small
 tag: softwaredev
 permalink: /blog/softwaredev/
-title: "Blog / Softwareentwicklung"
+title: "Blog / Software Development"
 pagination: 
     enabled: true
     category: softwaredev
     permalink: /:num/
+bodycss: "shop blog"
 ---
-{% include paginator.html %}

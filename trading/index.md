@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: category
 header: small
 tag: trading
 title: "Blog / Trading"
@@ -8,5 +8,5 @@ pagination:
     enabled: true
     category: trading
     permalink: /:num/
+bodycss: "shop blog"
 ---
-{% include paginator.html %}

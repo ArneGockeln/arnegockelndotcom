@@ -1,5 +1,5 @@
-<nav class="social">
+<ul>
 {% for s in site.data.settings.social %}
-<a href="{{ s.url }}"><i class="fa fa-{{ s.icon }}"></i></a>
+<li><a href="{{ s.url }}"><span class="icon-{{ s.icon }} small"></span> {{ s.icon }}</a></li>
 {% endfor %}
-</nav>
+</ul>

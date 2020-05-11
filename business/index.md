@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: category
 header: small
 tag: business
 permalink: /blog/business/
@@ -8,5 +8,5 @@ pagination:
     enabled: true
     category: business
     permalink: /:num/
+bodycss: "shop blog"
 ---
-{% include paginator.html %}

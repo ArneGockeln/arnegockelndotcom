@@ -1,37 +1,17 @@
-{% if include.list != nil %}
-{% assign thelist = include.list %}
-{% else %}
-{% assign thelist = paginator.posts %}
-{% endif %}
-<div class="content container">
-    <div class="row masonry-wrap">
-      {% for post in thelist %}
-        <div class="col-md-4 col-xs-6 post mix format-{% if post.image %}image{% else %}standart{% endif %}">
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="meta">
-                <span class="date">{{ post.date | date_to_string }}</span> <i class="fa fa-clock-o" aria-hidden="true"></i> 
-                {% include read-time.html %} 
-                <p>{% for cat in post.categories %}<a href="{{ site.url }}/blog/{{ cat }}">{{ cat }}</a>{% endfor %}</p>
-            </div>
-             {% if post.image %}
-            <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/uploads/{{ post.image }}"></a>
-            {% endif %}
-            <p>{{ post.content | strip_html | truncate: 300 }}</p>
-            <hr/>
-        </div>
-        {% endfor %}
-    </div>
-    <hr/>
-
+<div class="section-block pagination-3 bkg-grey-ultralight">
 {% if paginator.total_pages > 1 %}
-    <ul class="pagination text-center">
-      {% if paginator.next_page %}
-        <li><a href="{{ site.url }}{{ paginator.next_page_path }}" class="prev">&larr;</a></li>        
-        {% endif %}
-        <li>{{ paginator.page }} von {{ paginator.total_pages }}</li>
-        {% if paginator.previous_page %}
-        <li><a href="{{ site.url }}{{ paginator.previous_page_path }}" class="next">&rarr;</a></li>
-        {% endif %}
-    </ul>
+    <div class="row">
+        <div class="column width-12">
+            <ul>
+              {% if paginator.next_page %}
+                <li><a class="pagination-previous icon-left-open" href="{{ site.url }}{{ paginator.next_page_path }}"><span class="icon-left-open-mini"></span></a></li>
+                {% endif %}
+                <li>{{ paginator.page }} von {{ paginator.total_pages }}</li>
+                {% if paginator.previous_page %}
+                <li><a class="pagination-next disabled" href="{{ site.url }}{{ paginator.previous_page_path }}"><span class="icon-right-open-mini"></span></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
 {% endif %}
 </div>

@@ -1,49 +1,54 @@
 ---
 layout: default
-bodycss: home
+bodycss: "shop blog"
 ---
-<!-- SLIDER -->
-  <div class="row slider oneslider magnific-wrap">
-      <ul>
-          <li>
-              <img src="{{ site.url }}/assets/images/domoreheader.jpg" alt="Photo by Carl Heyerdahl on Unsplash">
-          </li>
-      </ul>
-  </div>
-  <!-- /.slider -->
-
-  <!-- CONTAINER -->
-  <div class="content container">
-    <div class="row irow text-center">
-      <div class="col-sm-4">
-        <a href="{{ site.url }}/softwareentwicklung.html">
-          <img src="{{ site.url }}/assets/images/icons/ico-cup.png" alt="" class="img-icon">
-          <h4>Webentwicklung</h4>
-          <p>Als Softwareentwickler stehe ich Dir, mit Berufserfahrung aus 20 Jahren, für dein Projekt zur Verfügung.</p>
-        </a>
-      </div>
-      <div class="col-sm-4">
-        <a href="{{ site.url }}/priceactiontrading.html">
-          <img src="{{ site.url }}/assets/images/icons/ico-image.png" alt="" class="img-icon">
-          <h4>Trading</h4>
-          <p>Als Price Action Futures Trader, mit 8 Jahren Markterfahrung, biete ich dir eine persönliche Schulung an.</p>
-        </a>
-      </div>
-      <div class="col-sm-4">
-        <a href="https://www.youtube.com/channel/UCSP7m2ZTRWOc56kq1gRg7mQ" target="_blank">
-          <img src="{{ site.url }}/assets/images/icons/ico-video.png" alt="" class="img-icon">
-          <h4>YouTube Kanal</h4>
-          <p>In meinem YouTube Kanal teile ich Fachwissen aus 8 Jahren Price Action Daytrading.</p>
-        </a>
+<!-- Intro Blog -->
+<div class="section-block intro-title-1 small bkg-grey-ultralight">
+    <div class="row">
+        <div class="column width-12">
+            <div class="title-container">
+                <div class="title-container-inner">
+                    <div class="row flex">
+                        <div class="column width-6 v-align-middle">
+                            <div>
+                                <h1 class="mb-0">Mindblowing</h1>
+                                <p class="lead mb-0 mb-mobile-20">Stay in the loop with Arne</p>
+                            </div>
+                        </div>
+                        <div class="column width-6 v-align-middle">
+                            <div>
+                                <ul class="breadcrumb mb-0 pull-right clear-float-on-mobile">
+                                    <li>
+                                        <a href="{{ site.url }}">Home</a>
+                                    </li>
+                                    <li>
+                                        Blog
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro Blog -->
+                
+<div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+  <div class="row">
+    <div class="column width-12">
+      <div class="blog-masonry grid-container fade-in-progressively" data-layout-mode="fitRows" data-grid-ratio="1.5" data-animate-resize data-animate-resize-duration="0">
+        <div class="row">
+          <div class="column width-12">
+            <div class="row grid content-grid-3 clearfix">
+{% include articles.html list=site.posts %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- /.container -->
+</div>
 
-  <!-- PROMO -->
-  <div class="promo">
-    <a href="{{ site.url }}/kontakt.html">
-      <h3>Vereinbare einen Termin für ein unverbindliches Gespräch</h3>
-    </a>
-  </div>
-  <!-- /.promo -->
+{% include paginator.html %}
