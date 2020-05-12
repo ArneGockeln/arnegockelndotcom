@@ -1,18 +1,21 @@
 mainleft:
 - name: 'Start'
   url: '/index.html'
-- name: 'Software'
-  url: '/blog/softwaredev'
-- name: 'Trading'
-  url: '/blog/trading'
+- name: 'Blog'
+  url: '/blog.html'
+  sub:
+    - name: 'Software Development'
+      url: '/blog/softwaredev'
+    - name: 'Trading'
+      url: '/blog/trading'
+    - name: 'Business'
+      url: '/blog/business'
 #  sub:
 #    - name: 'Schulung'
 #      url: '/priceactiontrading.html'
 #    - name: 'Posts'
 
 mainright:
-- name: 'Business'
-  url: '/blog/business'
 - name: 'Profile'
   url: '/profil.html'
 - name: 'Contact'
