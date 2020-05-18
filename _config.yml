@@ -2,8 +2,8 @@
 #
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arnegockeln.com" # the base hostname & protocol for your site, e.g. http://example.com
-default_title: "Trading & Software"
-default_description: "Diese Webseite ist über Arne Gockeln, ein Senior Softwareentwickler und Price Action Futures Trader."
+default_title: "Software Entwicklung & Beratung"
+default_description: "Diese Webseite ist über Arne Gockeln, ein Senior Softwareentwickler und Software Berater."
 head_title: "AG"
 head_desc: ""
 

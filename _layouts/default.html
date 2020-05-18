@@ -21,7 +21,7 @@ layout: compress
     {% if site.default_description != nil %}
     <meta name="description" content="{{ site.default_description }}">
     {% endif %}
-    <meta name="keywords" content="arne gockeln, softwareentwicklung, price action trading, scalping">
+    <meta name="keywords" content="arne gockeln, softwareentwicklung, softwareberatung, software, beratung, konzepte, recherche">
     {% else %}
     {% if page.description != nil %}
   <meta name="description" content="{{ page.description }}">
@@ -34,10 +34,8 @@ layout: compress
 
     <!-- Title &amp; Favicon -->
     <title>{{ page.title }}</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="{{ site.url }}/assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="192x192" href="{{ site.url }}/assets/favicon/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/favicon/favicon-32.png">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
@@ -112,7 +110,7 @@ layout: compress
             <!-- Overlay Navigation Menu End -->
 
             <!-- Header -->
-            <header class="header header-relative header-fixed-on-mobile nav-dark" data-bkg-threshold="100" data-sticky-threshold="0">
+            <header class="header header-absolute header-fixed-on-mobile nav-dark" data-bkg-threshold="100" data-sticky-threshold="40">
                 {% include header.html %}
             </header>
             <!-- Header End -->
@@ -170,14 +168,11 @@ layout: compress
 
     <!-- Js -->
     <script src="{{ site.url }}/assets/js/jquery-3.2.1.min.js"></script>
-    {% if page.hasmap %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
-    {% endif %}
     <script src="{{ site.url }}/assets/js/jquery.tm.avalanche.js"></script>
     <script src="{{ site.url }}/assets/js/timber.master.min.js"></script>
     {% if jekyll.environment == "production" %}
     <script src="{{ site.url }}/assets/js/tracking.js"></script>
-    <noscript><img src="https://analytics.gockeln.com/matomo.php?idsite=8&amp;rec=1" style="border:0;" alt="" /></noscript>
+    <noscript><img src="https://analytics.gockeln.com/matomo.php?idsite=7&amp;rec=1" style="border:0;" alt="" /></noscript>
     {% endif %}
 </body>
 </html>

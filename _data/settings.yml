@@ -19,6 +19,23 @@ footer:
 - name: 'Impressum'
   url: '/impressum.html'
 
+mobile:
+- name: 'Profil'
+  url: '/index.html'
+- name: 'Blog'
+  url: '/blog.html'
+  sub:
+    - name: 'Software Entwicklung'
+      url: '/blog/softwaredev'
+    - name: 'Business'
+      url: '/blog/business'  
+- name: 'Kontakt'
+  url: '/kontakt.html'  
+- name: 'Datenschutz'
+  url: '/datenschutz.html'
+- name: 'Impressum'
+  url: '/impressum.html'
+
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 #- {icon: 'youtube', url: 'https://www.youtube.com/channel/UCSP7m2ZTRWOc56kq1gRg7mQ'}
