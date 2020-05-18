@@ -19,36 +19,25 @@
 <div class="header-inner">
     <div class="row nav-bar">
         <div class="column width-12 nav-bar-inner">
-            <div class="row">
-                <div class="column width-5 primary-nav-column">
-                    <nav class="navigation nav-block primary-navigation nav-right sub-menu-indicator">
-                        {% include navi.html list=site.data.settings.mainleft %}
-                    </nav>
-                </div>
-                <div class="column width-2 logo-column">
-                    <div class="logo logo-center">
-                        <div class="logo-inner">
-                            <a href="index.html"><img src="{{ site.url }}/assets/images/logo-dark.png" alt="Arne Gockeln Logo" /></a>
-                            <a href="index.html"><img src="{{ site.url }}/assets/images/logo.png" alt="Arne Gockeln Logo" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column width-5 secondary-nav-column">
-                    <nav class="navigation nav-block primary-navigation nav-left sub-menu-indicator">
-                        {% include navi.html list=site.data.settings.mainright %}
-                    </nav>
-                    <nav class="navigation nav-block secondary-navigation nav-right">
-                        <ul>
-                            <li class="aux-navigation hide">
-                                <!-- Aux Navigation -->
-                                <a href="#" class="navigation-show side-nav-show nav-icon">
-                                    <span class="icon-menu"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+            <div class="logo">
+                <div class="logo-inner">
+                    <a href="{{ site.url }}/index.html"><img src="{{ site.url }}/assets/images/logo-dark.png" alt="Arne Gockeln Logo" /></a>
+                    <a href="{{ site.url }}/index.html"><img src="{{ site.url }}/assets/images/logo.png" alt="Arne Gockeln Logo" /></a>
                 </div>
             </div>
+            <nav class="navigation nav-block secondary-navigation nav-right">
+                <ul>
+                    <li class="aux-navigation hide">
+                        <!-- Aux Navigation -->
+                        <a href="#" class="navigation-show overlay-nav-show nav-icon">
+                            <span class="icon-menu"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation nav-block primary-navigation nav-left sub-menu-indicator">
+                {% include navi.html list=site.data.settings.mainnav %}
+            </nav>
         </div>
     </div>
 </div>

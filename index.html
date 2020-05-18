@@ -1,54 +1,187 @@
 ---
 layout: default
-bodycss: "shop blog"
+title: Profil
+bodycss: shop
 ---
-<!-- Intro Blog -->
-<div class="section-block intro-title-1 small bkg-grey-ultralight">
+<!-- Full Width Slider Section -->
+<div class="section-block featured-media page-intro tm-slider-parallax-container">
+    <div class="tm-slider-container full-width-slider" data-parallax data-parallax-fade-out data-animation="slide" data-scale-under="1140">
+        <ul class="tms-slides">
+            <li class="tms-slide" data-image data-force-fit data-overlay-bkg-color="#000000" data-overlay-bkg-opacity="0.3">
+                <div class="tms-content">
+                    <div class="tms-content-inner center">
+                        <div class="row flex">
+                            <div class="column width-6 offset-3">
+                                <div>
+                                    <h1 class="tms-caption mb-0 color-white"
+                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
+                                        data-no-scale
+                                    >Arne Gockeln</h1>
+                                    <div class="clear"></div>
+                                    <p class="tms-caption lead mb-0 mb-mobile-20 color-white opacity-07"
+                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
+                                        data-no-scale
+                                    >A beautiful mind, technician and tea lover.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img data-src="{{ site.url }}/assets/images/aboutheader.jpg" data-retina src="{{ site.url }}/assets/images/blank.png" alt=""/>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Full Width Slider Section -->
+
+<!-- Service Section -->
+<div class="section-block replicable-content bkg-grey-ultralight">
+    <div class="row">
+        <div class="column width-3">
+            <h2 class="mb-0">High Performance.</h2>
+            <h2 class="weight-semi-bold">Softwareentwicklung.</h2>
+        </div>
+        <div class="column width-8 offset-1">
+            <div class="row">
+                <div class="column width-12">
+                    <p class="lead mb-50">Meine gro&szlig;e Leidenschaft ist die Softwareentwicklung. Vor allem die Entwicklung von hoch performanten Webanwendungen, Schnittstellen und macOS Desktop Software.</p>
+                </div>
+            </div>
+            <div class="row flex">
+                <div class="column width-6">
+                    <p class="mb-30">Seit 1992 bilde ich mich, in h&ouml;heren Programmiersprachen, Scriptsprachen, Sicherheit, Schnittstellen, Content Management Systemen, Linux und macOS Systemadministration, autodidaktisch aus und weiter.</p>
+                    <p></p>
+                </div>
+                <div class="column width-6">
+                    <p>Mit dem Beginn meiner Selbstst&auml;ndigkeit im Jahr 2001 kamen au&szlig;erdem die Gebiete Projektmanagement, Unternehmensf&uuml;hrung, agile Arbeitsmethoden und Marketing hinzu.</p>
+                </div>
+            </div>
+            {% if site.env == 'development' %}
+            <!--div class="row flex">
+                <div class="column width-6">
+                    <h3>Algorithmic Trading</h3>
+                    <p class="mb-30">Seit 2012 besch&auml;ftige ich mich mit den Finanzm&auml;rkten, insbesondere mit der Entwicklung von halb- und vollautomatischen algorithmischen Handelssystemen, sowie Plugins f&uuml;r bestehende Handelsplattformen und der technischen Analyse von Finanzmarktdaten.</p>
+                    <p class="mb-30">Erfahrung in der Nutzung sowie Entwicklung von Plugins und Handelssystemen in den Chart Plattformen TradingView, NinjaTrader, MotiveWave und MetaTrader konnte ich in den letzten 5 Jahren sammeln.</p>
+                    <p class="mb-50">Zu eigenen Studienzwecken habe ich ein Hochfrequentes Handelssystem (HFT) im W&auml;hrungshandel entwickelt, welches &uuml;ber die FIX API direkt mit dem Markt verbunden war (DMA, Direct Market Access).</p>
+                </div>
+                <div class="column width-6">
+                    <h3>Webentwicklung</h3>
+                    <p class="mb-50"></p>
+                </div>
+            </div-->
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Service Section End -->
+
+<!-- Service Section -->
+<div class="section-block replicable-content">
+    <div class="row">
+        <div class="column width-4">
+            <h2 class="mb-0">20 Jahre Erfahrung.</h2>
+            <h2 class="weight-semi-bold">Software Beratung.</h2>
+        </div>
+        <div class="column width-7">
+            <div class="row flex">
+                <div class="column width-6">
+                    <h3>Open Source Software</h3>
+                    <p class="mb-30">Die Open Source Community ist unglaublich gro&szlig; und hat fantastische Projekte realisiert. Linux Betriebssysteme, Mailserver, Webserver, Content Management, 3D Modelling, Code Editoren und so vieles mehr!</p>
+                    <p>Ich nutze selbst Open Source Software, beteilige mich an dessen Weiterentwicklung und berate zum Einsatz entsprechender L&ouml;sungen.</p>
+                </div>
+                <div class="column width-6">
+                    <h3>Aufgaben und L&ouml;sungen</h3>
+                    <p class="mb-30">Das Rad muss nicht jedesmal neu erfunden werden. F&uuml;r fast jede Aufgabe wurde bereits eine n&uuml;tzliche Softwarel&ouml;sung geschaffen.</p>
+                    <p>In Software Projekten macht es Sinn, nicht jede Komponente selbst zu entwickeln. Es stehen, sehr gut gepflegte und n&uuml;tzliche, Bibliotheken und Komponenten bereit, dessen Einsatz sehr viel Zeit und Resourcen sparen.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Service Section End -->
+
+<!-- Service Section -->
+<div class="section-block replicable-content bkg-grey-ultralight">
+    <div class="row">
+        <div class="column width-3">
+            <h2 class="mb-0">Recherche &</h2>
+            <h2 class="weight-semi-bold">Konzeptentwicklung.</h2>
+        </div>
+        <div class="column width-8 offset-1">
+            <div class="row flex">
+                <div class="column width-6">
+                    <h3>Wissen ist Macht.</h3>
+                    <p class="mb-30">Alles beginnt mit einer Idee und der anschlie&szlig;enden Recherche. Machbarkeitsstudien, Stand der Wissenschaft, Stand der Technik. Ich nutze wissenschaftliche Arbeitsmethoden um Informationen rund um die Online Welt, neue Technologien und Software zu sammeln und auszuwerten.</p>
+                    <p>Als Resultat entstehen Dokumente, mit Zusammenfassungen, Analysen, Auswertungen und Quellenangaben, die f&uuml;r die weitere Bewertung und Umsetzung der Idee hilfreich sind.</p>
+                </div>
+                <div class="column width-6">
+                    <h3>Ein Plan. Ein Ziel.</h3>
+                    <p class="mb-30">Jeder Gesch&auml;ftsidee, jedem Produkt und jeder gro&szlig;artige Erfindung liegt ein niedergeschriebenes Konzept, mit einer eindeutigen Zieldefinition, zugrunde. In einem Konzept sind alle wichtigen und zur Umsetzung n&ouml;tigen Informationen strukturiert niedergeschrieben und f&uuml;r alle Beteiligten klar verst&auml;ndlich.</p>
+                    <p>Ich schreibe Business Pl&auml;ne, Produkt Konzepte und Software Konzepte mit viel Liebe zum Detail.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Section End -->
+
+<!-- Custom Feature Columns -->
+<div class="section-block replicable-content">
+    <div class="row">
+        <div class="column width-12 center">
+            <h2 class="mb-50"><span class="weight-semi-bold">Gro&szlig;e</span> und kleine Projekte</h2>
+        </div>
+    </div>
+    <div class="row flex">
+        <div class="column width-4">
+            <div class="feature-column">
+                <h2 class="title-medium mb-5 weight-light font-alt-1 color-gradient-royal-garden">f&uuml;r Agenturen</h2>
+                <p class="mb-30">Als Subunternehmer durfte ich an einigen gro&szlig;en Projekten teilnehmen. Bekannte Namen wie RTLinteractive, Vodafone, LG Electronics oder Tom Taylor z&auml;hlten zu den Agentur-Kunden.</p>
+                <p>Mein Schwerpunk lag hier in der Entwicklung von WordPress basierten Webseiten und Plugins, der Schnittstellenentwicklung sowie Software Beratung.</p>
+            </div>
+        </div>
+        <div class="column width-4">
+            <div class="feature-column">
+                <h2 class="title-medium mb-5 weight-light font-alt-1 color-gradient-royal-garden">f&uuml;r Unternehmen</h2>
+                <p class="mb-30">F&uuml;r lokale Unternehmen, wie Ruhr24, KADDI-LACK Die Dortmunder Lackmanufaktur oder die Bundesfachschule für Orthopädietechnik e.V. habe ich, im direkten Auftrag, individuelle Software Projekte durchgef&uuml;hrt.</p>
+                <p>Ich liebe gr&uuml;ne Wiese Projekte mit individueller Anforderung! Hier kann ich mein volles Potential entfalten.</p>
+            </div>
+        </div>
+        <div class="column width-4">
+            <div class="feature-column">
+                <h2 class="title-medium mb-5 weight-light font-alt-1 color-gradient-royal-garden">f&uuml;r Gr&uuml;nder</h2>
+                <p class="mb-30">Im Netzwerk in Hamburg und Dortmund, konnte ich Gr&uuml;ndern helfen ihre Gesch&auml;ftsidee mit der richtigen Technologie umzusetzen. Ich berate und unterst&uuml;tze mit meinem Netzwerk, langj&auml;hriger Erfahrung und Fachwissen.</p>
+                <p>Als Gutachter f&uuml;r Business Pl&auml;ne durfte ich bei der Wirtschaftsf&ouml;rderung Dortmund, beim Gr&uuml;nderwettbewerb start2grow mitwirken.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom Feature Columns End -->
+
+<!-- Portfolio Grid -->
+<div class="section-block grid-container fade-in-progressively full-width small-margins no-padding" data-layout-mode="masonry" data-grid-ratio="1" data-animate-filter-duration="700" data-set-dimensions data-animate-resize data-animate-resize-duration="0.8" data-as-bkg-image>
     <div class="row">
         <div class="column width-12">
-            <div class="title-container">
-                <div class="title-container-inner">
-                    <div class="row flex">
-                        <div class="column width-6 v-align-middle">
-                            <div>
-                                <h1 class="mb-0">Mindblowing</h1>
-                                <p class="lead mb-0 mb-mobile-20">Stay in the loop with Arne</p>
-                            </div>
-                        </div>
-                        <div class="column width-6 v-align-middle">
-                            <div>
-                                <ul class="breadcrumb mb-0 pull-right clear-float-on-mobile">
-                                    <li>
-                                        <a href="{{ site.url }}">Home</a>
-                                    </li>
-                                    <li>
-                                        Blog
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="row grid content-grid-4">
+                <div class="grid-item wide grid-sizer">
+                    <div class="thumbnail rounded">
+                        <img src="{{ site.url }}/assets/images/portfolio-grid-left-consulting.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumbnail rounded">
+                        <img src="{{ site.url }}/assets/images/portfolio-grid-middle-concept.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="thumbnail rounded">
+                        <img src="{{ site.url }}/assets/images/portfolio-grid-right-dev.jpg" alt=""/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Intro Blog -->
-                
-<div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
-  <div class="row">
-    <div class="column width-12">
-      <div class="blog-masonry grid-container fade-in-progressively" data-layout-mode="fitRows" data-grid-ratio="1.5" data-animate-resize data-animate-resize-duration="0">
-        <div class="row">
-          <div class="column width-12">
-            <div class="row grid content-grid-3 clearfix">
-{% include articles.html list=site.posts %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Portfolio Grid -->
 
-{% include paginator.html %}

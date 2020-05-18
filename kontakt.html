@@ -1,65 +1,61 @@
 ---
 layout: default
 title: Kontakt
-header: big
+bodycss: shop
 ---
-<!-- CONTAINER -->
-<div class="content container">
-    <!-- SLIDER -->
-    <div class="row slider oneslider magnific-wrap">
-        <ul>
-            <li>
-                <a href="{{ site.url }}/assets/images/kontaktslide.png" class="magnific" title="Kontaktiere Arne Gockeln">
-                    <img src="{{ site.url }}/assets/images/kontaktslide.png" alt="">
-                </a>
+<!-- Full Width Slider Section -->
+<div class="section-block featured-media page-intro small tm-slider-parallax-container">
+    <div class="tm-slider-container full-width-slider" data-parallax data-parallax-fade-out data-animation="slide" data-scale-under="1140">
+        <ul class="tms-slides">
+            <li class="tms-slide" data-image data-force-fit data-overlay-bkg-color="#000000" data-overlay-bkg-opacity="0.3">
+                <div class="tms-content">
+                    <div class="tms-content-inner center">
+                        <div class="row flex">
+                            <div class="column width-6 offset-3">
+                                <div>
+                                    <h1 class="tms-caption mb-0 color-white"
+                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
+                                        data-no-scale
+                                    >Kontakt</h1>
+                                    <div class="clear"></div>
+                                    <p class="tms-caption lead mb-0 mb-mobile-20 color-white opacity-07"
+                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
+                                        data-no-scale
+                                    >Per E-Mail oder Social Media</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img data-src="{{ site.url }}/assets/images/kontaktslider.jpg" data-retina src="{{ site.url }}/assets/images/blank.png" alt="Kontaktiere Arne Gockeln"/>
             </li>
         </ul>
-        <div class="slider-nav">
-            <a href="" class="prev">&larr;</a>
-            <nav class="nav-pages"></nav>
-            <a href="" class="next">&rarr;</a>
-        </div>
     </div>
-    <!-- /.slider -->
-    <div class="row irow">
-        <div class="col-sm-4">
-            <h4>Adresse</h4>
-            <address>Blumenau 125,<br/>22089 Hamburg</address>
+</div>
+<!-- Full Width Slider Section -->
+
+<!-- Service Section -->
+<div class="section-block replicable-content">
+    <div class="row flex">
+        <div class="column width-4">
+            <h3 class="mb-30">Adresse</h3>
+            <p>Arne Gockeln<br/>Blumenau 125<br/>22089 Hamburg<br/>Germany</p>
         </div>
-        <div class="col-sm-4">
-            <h4>Kontakt</h4>
-            <dl class="dl-horizontal">
-                <dt>LinkedIn:</dt>
-                <dd>
-                    <p>
-                        <a href="http://www.linkedin.com/in/arnegockeln/" target="_blank">zu LinkedIn wechseln</a>
-                    </p>
-                </dd>
-                <dt>Xing:</dt>
-                <dd>
-                    <p>
-                        <a href="https://www.xing.com/profile/Arne_Gockeln" target="_blank">zu Xing wechseln</a>
-                    </p>
-                </dd>
-                <dt>E-Mail:</dt>
-                <dd>
-                    <p>
-                        <a href="mailto:moin@gockeln.com">moin@gockeln.com</a>
-                    </p>
-                </dd>
-            </dl>
+        <div class="column width-4">
+            <h3 class="mb-30">Kontakt</h3>
+            <p>Per E-Mail und Social Media erreichst Du mich am schnellsten. Bitte hinterlasse eine Telefonnummer, sodass ich Dich zurückrufen kann. Wir können auch einen Zoom Call vereinbaren.</p>
+            <p><a href="mailto:moin@gockeln.com">moin@gockeln.com</a></p>
         </div>
-        <div class="col-sm-4">
-            <h4>Social Media</h4>
+        <div class="column width-4">
+            <h3 class="mb-30">Social Media</h3>
             {% include social.html %}
         </div>
     </div>
-    <div class="row irow">
-        <div class="col-sm-12">
-            <h3>Standing Invitation <small>&mdash;</small></h3>
-            <p>I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business, trading or software development, then I invite you to get in touch with me.</p>
-            <p>Especially if you are in Hamburg! Then I would also like to meet you personally. The first cup of tea or coffee is on me!</p>
+    <div class="row">
+        <div class="column width-12">
+            <h3>Standing Invitation</h3>
+            <p>I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business, trading or software development, then I invite you to get in touch with me. Especially if you are in Hamburg! Then I would also like to meet you personally. The first cup of tea or coffee is on me!</p>
         </div>
     </div>
 </div>
-<!-- /.container -->
+<!-- Service Section End -->
