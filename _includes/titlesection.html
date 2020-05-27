@@ -3,15 +3,17 @@
     include.title = the h1 title
     include.subtitle = the subtitle
     include.color = foreground color
-    include.gradient = background color: purple-haze, royal-garden, norse-beauty
+    include.gradient = background gradient color: purple-haze, royal-garden, norse-beauty
+    include.bkg = background color: grey-ultralight
+    include.cssclass = additional css classes
 -->
-<div class="section-block intro-title-1 small {% if include.gradient != nil %}bkg-gradient-{{ include.gradient }}{% endif %} {% if include.color != nil %}color-{{ include.color }}{% endif %}">
+<div class="section-block intro-title-1 small {% if include.bkg != nil %}bkg-{{ include.bkg }}{% endif %} {% if include.gradient != nil %}bkg-gradient-{{ include.gradient }}{% endif %} {% if include.color != nil %}color-{{ include.color }}{% endif %} {% if include.cssclass != nil %}{{ include.cssclass }}{% endif %}">
     <div class="row">
         <div class="column width-12">
             <div class="title-container">
                 <div class="title-container-inner">
                     <div class="row flex">
-                        <div class="column width-6 v-align-middle">
+                        <div class="column width-12 v-align-middle">
                             <div>
                                 {% if include.title != nil %}
                                 <h1 class="mb-0">{{ include.title }}</h1>

@@ -1,24 +1,7 @@
 ---
 layout: default
 ---
-<div class="section-block intro-title-1 small bkg-grey-ultralight">
-    <div class="row">
-        <div class="column width-12">
-            <div class="title-container">
-                <div class="title-container-inner">
-                    <div class="row flex">
-                        <div class="column width-12 v-align-middle">
-                            <div>
-                                <h1 class="mb-0">{{ page.title }}</h1>
-                                <p class="lead mb-0 mb-mobile-20">Stay in the loop with Arne</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include titlesection.html title=page.title subtitle="Stay in the loop with Arne" color="black" bkg="grey-ultralight" cssclass="pt-70" %}
 
 <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
   <div class="row">
