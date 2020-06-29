@@ -1,6 +1,6 @@
-<ul>
-    {% for s in include.list %}
-    <li {% if s.sub != nil %}class="contains-sub-menu{% if page.url == s.url or page.url == '/' and s.url == '/index.html' %} current{% endif %}"{% endif %}>
+<ul class="menu-list">
+  {% for s in include.list %}
+  <li class="{% if s.sub != nil %}menu-item-has-children{% if page.url == s.url or page.url == '/' and s.url == '/index.html' %} active{% endif %}{% endif %}">
       <a href="{{ site.url }}{{ s.url }}">{{ s.name }}</a>
       {% if s.sub != nil %}
       <ul class="sub-menu">
@@ -8,7 +8,7 @@
         <li><a href="{{ site.url }}{{ sub.url }}">{{ sub.name }}</a></li>
         {% endfor %}
       </ul>
-      {% endif %}
-    </li>
+     {% endif %}
+  </li>
   {% endfor %}
 </ul>

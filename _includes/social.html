@@ -1,5 +1,3 @@
-<ul>
 {% for s in site.data.settings.social %}
-<li><a href="{{ s.url }}"><span class="icon-{{ s.icon }} small"></span> {{ s.icon }}</a></li>
+<a href="{{ s.url }}" target="_blank"><span class="fa fa-{{ s.icon }} small"></span> {{ s.icon }}</a><br/>
 {% endfor %}
-</ul>

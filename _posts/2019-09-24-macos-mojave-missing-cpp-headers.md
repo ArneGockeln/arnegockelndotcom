@@ -7,7 +7,6 @@ categories: [softwaredev]
 image: /092019/zan-ilic-0WzeC6JtbHU-unsplash.jpg
 imagecopyright: "Photo by Zan Ilic on Unsplash"
 ---
-
 I ran into some issues in compiling vcpkg on macOS 10.14.6 (Mojave). First one was that I needed to use `gcc` instead of Apple Clang Compiler. brew fixed that problem. But then the compiler sends the following build failures:
 
 ```plain

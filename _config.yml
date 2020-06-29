@@ -2,8 +2,8 @@
 #
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arnegockeln.com" # the base hostname & protocol for your site, e.g. http://example.com
-default_title: "Software Entwicklung & Beratung"
-default_description: "Diese Webseite ist über Arne Gockeln, ein Senior Softwareentwickler und Software Berater."
+default_title: "Software | Concepts & Consulting"
+default_description: "This website is about Arne Gockeln, a senior software developer, concept writer and consultant."
 head_title: "AG"
 head_desc: ""
 
@@ -20,6 +20,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 # plugin  jekyll-paginate-v2 configuration
 pagination:
@@ -27,7 +28,7 @@ pagination:
   collection: 'posts'
   per_page: 5
   title: ''
-  permalink: '/blog/:num/'
+  permalink: '/page/:num/'
   sort_field: 'date'
   sort_reverse: true
   limit: 0
@@ -69,11 +70,11 @@ defaults:
       type: posts   # limit to posts
     values:
       is_post: true # automatically set is_post=true for all posts
-      bodycss: single
-      header: small
+      lang: en
   -
     scope:
       path: ""
       type: pages
     values:
       is_post: false
+      lang: en

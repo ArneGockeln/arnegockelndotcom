@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
-{% include titlesection.html title=page.title color="white" gradient="great-whale" %}
+{% include titlesection.html title=page.title %}
 
-{{ content }}
+<article class="post">
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>

@@ -5,30 +5,22 @@
 {% endif %}
 
 {% for post in thelist %}
-<div class="grid-item">
-    <article class="post">
-        <div class="post-content with-background">
-            <div class="post-media">
-                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
-                    <a class="overlay-link" href="{{ site.url }}{{ post.url }}">
-                        <img src="{{ site.url }}/uploads/{{ post.image }}" alt=""/>
-                        <span class="overlay-info">
-                            <span>
-                                <span>
-                                    Read Full Article
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <h2 class="post-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="post-info">
-                <span class="post-date">{{ post.date | date_to_string }}</span>, in {% for cat in post.categories %}<span class="post-category"><a href="{{ site.url }}/blog/{{ cat }}">{{ cat }}</a></span>{% endfor %}
-            </div>
-            <a href="#" class="read-more">Read More →</a>
-            {% include author.html %}
+<article class="post">
+    <div class="post-media">
+        <a href="{{ site.url }}{{ post.url }}">
+            <img src="{{ site.url }}/uploads/{{ post.image }}" alt="">
+        </a>
+    </div>
+    <div class="post-content">
+        <h2 class="title">
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+
+        <!-- Post Details -->
+        <div class="post-details">
+            <a href="#" class="post-date">{{ post.date | date_to_string }}</a> {% for cat in post.categories %}<span class="post-category"><a href="{{ site.url }}/blog/{{ cat }}">#{{ cat }}</a></span>{% endfor %}</a>
         </div>
-    </article>
-</div>
+        <!-- End Post Details -->
+    </div>
+</article>
 {% endfor %}

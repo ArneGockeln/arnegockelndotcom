@@ -1,40 +1,46 @@
 mainnav:
-- name: 'Profil'
-  url: '/index.html'
-- name: 'Blog'
-  url: '/blog.html'
-  sub:
-    - name: 'Software Entwicklung'
-      url: '/blog/softwaredev'
-    - name: 'Business'
-      url: '/blog/business'  
-- name: 'Kontakt'
-  url: '/kontakt.html'
+  en:
+    - name: 'Profile'
+      url: '/index.html'
+    - name: 'Blog'
+      url: '/blog/'
+      sub:
+        - name: 'Trading'
+          url: '/blog/trading'
+        - name: 'Development'
+          url: '/blog/softwaredev'
+        - name: 'Business'
+          url: '/blog/business'  
+    - name: 'Contact'
+      url: '/contact.html'
+  de:
+    - name: 'Profil'
+      url: '/index.html'
+    - name: 'Blog'
+      url: '/blog.html'
+      sub:
+        - name: 'Trading'
+          url: '/blog/trading'
+        - name: 'Entwicklung'
+          url: '/blog/softwaredev'
+        - name: 'Business'
+          url: '/blog/business'  
+    - name: 'Kontakt'
+      url: '/kontakt.html'
 
 footer:
-- name: 'Kontakt'
-  url: '/kontakt.html'
-- name: 'Datenschutz'
-  url: '/datenschutz.html'
-- name: 'Impressum'
-  url: '/impressum.html'
+  en:
+    - name: 'Privacy'
+      url: '/privacypolicy.html'
+    - name: 'Impressum'
+      url: '/impressum.html'
+  de:
+    - name: 'Datenschutz'
+      url: '/datenschutz.html'
+    - name: 'Impressum'
+      url: '/impressum.html'
+  
 
-mobile:
-- name: 'Profil'
-  url: '/index.html'
-- name: 'Blog'
-  url: '/blog.html'
-  sub:
-    - name: 'Software Entwicklung'
-      url: '/blog/softwaredev'
-    - name: 'Business'
-      url: '/blog/business'  
-- name: 'Kontakt'
-  url: '/kontakt.html'  
-- name: 'Datenschutz'
-  url: '/datenschutz.html'
-- name: 'Impressum'
-  url: '/impressum.html'
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
@@ -49,3 +55,5 @@ social:
 pagination:
   next_page: 'Newer'
   previous_page: 'Older'
+
+logo: "Arne"

@@ -1,17 +1,25 @@
-<div class="section-block pagination-3 bkg-grey-ultralight">
+<!-- Pagination -->
 {% if paginator.total_pages > 1 %}
-    <div class="row">
-        <div class="column width-12">
-            <ul>
-              {% if paginator.next_page %}
-                <li><a class="pagination-previous icon-left-open" href="{{ site.url }}{{ paginator.next_page_path }}"><span class="icon-left-open-mini"></span></a></li>
-                {% endif %}
-                <li>{{ paginator.page }} von {{ paginator.total_pages }}</li>
-                {% if paginator.previous_page %}
-                <li><a class="pagination-next disabled" href="{{ site.url }}{{ paginator.previous_page_path }}"><span class="icon-right-open-mini"></span></a></li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
-{% endif %}
+<div class="pagination-wrap">
+    <ul>
+         {% if paginator.previous_page %}
+        <li>
+            <a class="next page-numbers" href="{{ site.url }}{{ paginator.previous_page_path }}">
+                <i class="fa fa-long-arrow-left"></i>
+            </a>
+        </li>
+        {% endif %}
+        <li>
+            <span class="page-numbers current">{{ paginator.page }} von {{ paginator.total_pages }}</span>
+        </li>
+        {% if paginator.next_page %}
+        <li>
+            <a class="prev page-numbers" href="{{ site.url }}{{ paginator.next_page_path }}">
+                <i class="fa fa-long-arrow-right"></i>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
 </div>
+{% endif %}
+<!-- End Pagination -->

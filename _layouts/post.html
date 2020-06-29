@@ -1,35 +1,29 @@
 ---
 layout: default
-bodycss: "shop blog"
 ---
-<div class="section-block clearfix pt-90 pb-20 bkg-grey-ultralight">
-    <div class="row">
-        <!-- Content Inner -->
-        <div class="column width-10 offset-1 content-inner blog-single-post">
-            <article class="post">
-                <div class="post-content with-background">
-                    <h2 class="post-title center">{{ page.title }}</h2>
-                    <div class="post-info center">
-                        <span class="post-date">{{ page.date | date_to_string }}</span>, in {% for cat in page.categories %}<span class="post-category"><a href="{{ site.url }}/blog/{{ cat }}">{{ cat }}</a></span>{% endfor %}
-                    </div>
-
-                    {% if page.image != nil %}
-                    <div class="thumbnail full-width">
-                        <img src="{{ site.url }}/uploads{{ page.image }}" alt="{{ page.imagecopyright }}">
-                        {% if page.imagecopyright != nil %}
-                        <div class="caption-below">
-                            {{ page.imagecopyright }}
-                        </div>
-                        {% endif %}
-                    </div>
-                    {% endif %}
-
-                    {{ content }}
-
-                    {% include author.html %}
-                </div>
-            </article>
-        </div>
-        <!-- Content Inner End -->
+<article class="post">
+    {% if page.image != nil %}
+    <div class="post-media">
+        <img src="{{ site.url }}/uploads{{ page.image }}" alt="{{ page.imagecopyright }}">
     </div>
-</div>
+    {% endif %}
+    <div class="post-content">
+        <h2 class="title">{{ page.title }}</h2>
+
+        <!-- The Content -->
+        <div class="the-content">
+            {{ content }}
+            <div class="post-footer">
+                <!-- Post Details -->
+                <div class="post-details">
+                    <span class="post-date">{{ page.date | date_to_string }}</span> {% for cat in page.categories %}<span class="post-category"><a href="{{ site.url }}/blog/{{ cat }}">#{{ cat }}</a></span>{% endfor %}
+                    {% if page.imagecopyright != nil %}
+                        <p>{{ page.imagecopyright }}</p>
+                    {% endif %}
+                </div>
+                <!-- End Post Details -->
+            </div>
+        </div>
+        <!-- End The Content -->
+    </div>
+</article>

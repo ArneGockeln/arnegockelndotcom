@@ -1,61 +1,38 @@
 ---
 layout: default
 title: Kontakt
-bodycss: shop
+lang: de
+translatedurl: /contact.html
 ---
-<!-- Full Width Slider Section -->
-<div class="section-block featured-media page-intro small tm-slider-parallax-container">
-    <div class="tm-slider-container full-width-slider" data-parallax data-parallax-fade-out data-animation="slide" data-scale-under="1140">
-        <ul class="tms-slides">
-            <li class="tms-slide" data-image data-force-fit data-overlay-bkg-color="#000000" data-overlay-bkg-opacity="0.3">
-                <div class="tms-content">
-                    <div class="tms-content-inner center">
-                        <div class="row flex">
-                            <div class="column width-6 offset-3">
-                                <div>
-                                    <h1 class="tms-caption mb-0 color-white"
-                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
-                                        data-no-scale
-                                    >Kontakt</h1>
-                                    <div class="clear"></div>
-                                    <p class="tms-caption lead mb-0 mb-mobile-20 color-white opacity-07"
-                                        data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
-                                        data-no-scale
-                                    >Per E-Mail oder Social Media</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img data-src="{{ site.url }}/assets/images/kontaktslider.jpg" data-retina src="{{ site.url }}/assets/images/blank.png" alt="Kontaktiere Arne Gockeln"/>
-            </li>
-        </ul>
+<article class="post">
+    <div class="post-media">
+        <img src="{{ site.url }}/assets/images/kontaktheader.jpg" alt="Contact Header">
     </div>
-</div>
-<!-- Full Width Slider Section -->
-
-<!-- Service Section -->
-<div class="section-block replicable-content">
-    <div class="row flex">
-        <div class="column width-4">
-            <h3 class="mb-30">Adresse</h3>
-            <p>Arne Gockeln<br/>Gl&uuml;ckaufsegenstr 120<br/>44265 Dortmund<br/>Germany</p>
-        </div>
-        <div class="column width-4">
-            <h3 class="mb-30">Kontakt</h3>
-            <p>Per E-Mail und Social Media erreichst Du mich am schnellsten. Bitte hinterlasse eine Telefonnummer, sodass ich Dich zurückrufen kann. Wir können auch einen Zoom Call vereinbaren.</p>
-            <p><a href="mailto:moin@gockeln.com">moin@gockeln.com</a></p>
-        </div>
-        <div class="column width-4">
-            <h3 class="mb-30">Social Media</h3>
-            {% include social.html %}
+    <div class="post-content">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Kontakt</h3>
+                <p>Per E-Mail und Social Media erreichst Du mich am schnellsten. Bitte hinterlasse eine Telefonnummer, sodass ich Dich zurückrufen kann. Wir können auch einen Zoom Call vereinbaren.</p>
+                <p>E-Mail: <a href="mailto:moin@gockeln.com">moin@gockeln.com</a></p>
+            </div>
+            <div class="col-md-4">
+                <h3>Lokal</h3>
+                <p>Arne Gockeln<br/>Gl&uuml;ckaufsegenstr 120<br/>44265 Dortmund<br/>Deutschland, Erde</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Online</h3>
+                {% include social.html %}
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="column width-12">
-            <h3>Standing Invitation</h3>
-            <p>I am always interested in meeting new people and exchanging ideas. So here's my suggestion: if you feel like talking to me about business, trading or software development, then I invite you to get in touch with me. Especially if you are in Hamburg! Then I would also like to meet you personally. The first cup of tea or coffee is on me!</p>
+</article>
+<article class="post">
+    <div class="post-content">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Einladung</h3>
+                <p>Das Netzwerk kann nicht groß genug sein! Ich bin immer an neuen Persönlichkeiten interessiert und freue mich über neue Kontakte. Hier ist mein Vorschlag: Wenn Du mit mir über Software Entwicklung, Startups, Tech und Gründertum sprechen möchtest dann lade ich dich herzlich dazu ein mit mir in Kontakt zu treten! Vor allem wenn Du in Dortmund bist, dann auch gerne persönlich! Der erste Kaffee oder Tee geht auf mich!</p>
+            </div>
         </div>
     </div>
-</div>
-<!-- Service Section End -->
+</article>

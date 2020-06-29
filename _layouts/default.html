@@ -6,6 +6,8 @@ layout: compress
 <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Open Graph -->
     <meta property="og:title" content="{{ site.title }}" />
@@ -21,7 +23,7 @@ layout: compress
     {% if site.default_description != nil %}
     <meta name="description" content="{{ site.default_description }}">
     {% endif %}
-    <meta name="keywords" content="arne gockeln, softwareentwicklung, softwareberatung, software, beratung, konzepte, recherche">
+    <meta name="keywords" content="arne gockeln, software, beratung, konzepte, recherche">
     {% else %}
     {% if page.description != nil %}
   <meta name="description" content="{{ page.description }}">
@@ -36,140 +38,185 @@ layout: compress
     <title>{{ page.title }}</title>
     <link rel="apple-touch-icon" sizes="192x192" href="{{ site.url }}/assets/favicon/favicon-192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/favicon/favicon-32.png">
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
     
-    <!-- Css -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/core.min.css" />
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/skin.css" />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat:400,600,700%7CLato:400,700' type='text/css' media='all' />
 
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/libs/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/libs/justifiedGallery.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/libs/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/styles.css">
+
 {% feed_meta %}
 <!-- Use Jekyll SEO plugin -->
   {% if seo %}{% seo %}{% endif %}
 </head>
-<body class="{% if page.bodycss != nil %}{{ page.bodycss }}{% endif %}">
+<body class="home">
+<!-- Wrapper Site -->
+    <div id="main-content">
 
-    <!-- Side Navigation Menu -->
-    <aside class="side-navigation-wrapper enter-right" data-no-scrollbar data-animation="push-in">
-        <div class="side-navigation-scroll-pane">
-            <div class="side-navigation-inner">
-                <div class="side-navigation-header">
-                    <div class="navigation-hide side-nav-hide">
-                        <a href="#">
-                            <span class="icon-cancel medium"></span>
-                        </a>
-                    </div>
-                </div>
-                <nav class="side-navigation nav-block">
-                    {% include navi.html list=site.data.navi.mobile %}
-                </nav>
-                <div class="side-navigation-footer">
-                    <p class="copyright no-margin-bottom">&copy; 2020 Arne Gockeln.</p>
-                </div>
+        <!-- Preload -->
+        <div id="preload">
+            <div class="kd-bounce">
+                <div></div>
+                <div></div>
             </div>
         </div>
-    </aside>
-    <!-- Side Navigation Menu End -->
+        <!-- Preload -->
 
-    <div class="wrapper reveal-side-navigation bkg-charcoal">
-        <div class="wrapper-inner">        
-            <!-- Overlay Navigation Menu -->
-            <div class="overlay-navigation-wrapper enter-right" data-no-scrollbar data-animation="scale-in">
-                <div class="overlay-navigation-scroll-pane">
-                    <div class="overlay-navigation-inner">
-                        <div class="v-align-middle">
-                            <div class="overlay-navigation-header row collapse full-width">
-                                <div class="column width-12">
-                                    <div class="navigation-hide overlay-nav-hide">
-                                        <a href="#">
-                                            <span class="icon-cancel"></span>
-                                        </a>
-                                    </div>
+        <!-- Mobile Menu -->
+        <div class="mobile">
+            <div class="container">
+                <!-- Mobile -->
+                <div class="menu-mobile">
+                    <span class="item item-1"></span>
+                    <span class="item item-2"></span>
+                    <span class="item item-3"></span>
+                </div>
+                <!-- End Mobile -->
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="{{ site.url }}/index.html">{{ site.data.settings.logo }}</a>
+                </div>
+                <!-- End Logo -->
+            </div>
+        </div>
+        <div class="hide-menu"></div>
+        <!-- End Mobile Menu -->
+
+        <div class="container">
+            {% if jekyll.environment == "production" %}
+            <div class="row hide" id="gdpralert">
+                <div class="col-md-10">
+                    <p>Um Ihnen ein optimales Online-Erlebnis bieten zu können, verwenden wir Cookies. Mit dem Weitersurfen stimmen Sie unseren <a href="{{ site.url }}/datenschutz.html">Datenschutzrichtlinien</a> zu.</p>
+                </div>
+                <div class="col-md-2">
+                    <span class="close btn-agree right" style="cursor:pointer;">OK</span>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="header affix">
+                        <div class="table">
+                            <div class="table-cell">
+                                <!-- Logo -->
+                                <div class="logo">
+                                    <a href="{{ site.url }}/index.html">{{ site.data.settings.logo }}</a>
                                 </div>
-                            </div>
-                            <div class="row collapse full-width">
-                                <div class="column width-12">
-                                    <nav class="overlay-navigation nav-block left">
-                                        {% include navi.html list=site.data.settings.mobile %}
+                                <!-- End Logo -->
+
+                                <!-- Navigation -->
+                                <div class="main-menu">
+                                    <nav>
+                                        {% assign navilist = site.data.settings.mainnav.en %}
+                                        {% if page.lang == 'de' %}
+                                          {% assign navilist = site.data.settings.mainnav.de %}
+                                        {% endif %}
+
+                                        {% include navi.html list=navilist %}
+
+                                        {% if page.translatedurl != nil %}
+                                        <br/>
+                                        <a href="{{ site.url }}{{ page.translatedurl }}">
+                                            {% if page.lang != nil and page.lang == 'de' %}
+                                            English
+                                            {% else %}
+                                            Deutsch
+                                            {% endif %}
+                                        </a>
+                                        {% endif %}
+
+                                        
                                     </nav>
                                 </div>
-                            </div>
-                            <div class="overlay-navigation-footer row full-width center">
-                                <div class="column width-12 no-padding">
-                                    <p class="copyright">&copy; 2020 Arne Gockeln.</p>
+                                <!-- End Navigation -->
+
+                                <!-- Socials -->
+                                <div class="socials">
+                                    {% for social in site.data.settings.social %}
+                                    <a href="{{ social.url }}" title="{{ social.icon }}" target="_blank">
+                                        <i class="fa fa-{{ social.icon }}"></i>
+                                    </a>
+                                    {% endfor %}
                                 </div>
+                                <div class="box-search">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <div class="container">
+                                                <form class="search-form" action="#" method="get">
+                                                    <input type="search" name="s" class="search-field" placeholder="Type &amp; hit enter" value="" title="Search">
+                                                    <div class="kd-close">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Socials -->
+
+                                <div class="copyright">
+                                    <p>
+                                        &copy;2020 by Arne Gockeln.<br/>All rights reserved.
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="projects">
+                        {{ content }}
                     </div>
                 </div>
             </div>
-            <!-- Overlay Navigation Menu End -->
-
-            <!-- Header -->
-            <header class="header header-absolute header-fixed-on-mobile nav-dark" data-bkg-threshold="100" data-sticky-threshold="40">
-                {% include header.html %}
-            </header>
-            <!-- Header End -->
-            
-            <!-- Content -->
-            <div class="content clearfix">
-                {{ content }}
-            </div>
-            <!-- Content End -->
-
-            <!-- Footer -->
-            <footer class="footer footer-light with-border" id="footer">
-                <div class="footer-top">
-                    <div class="row flex">
-                        <div class="column width-2">
-                            <div class="widget">
-                                <div class="footer-logo">
-                                    <a href="{{ site.url }}"><img src="{{ site.url }}/assets/images/logo-dark.png" alt="Arne Gockeln Logo" /></a>
-                                </div>
-                                <p>Softwareentwicklung, Beratung und Konzepte mit Liebe zum Detail.</p>
-                            </div>
-                        </div>
-                        <div class="column width-10">
-                            <div class="row two-columns-on-tablet">
-                                <div class="column width-3">
-                                    <div class="widget">
-                                        <h3 class="widget-title mb-30">Rechtliches</h3>
-                                        {% include navi.html list=site.data.settings.footer %}
-                                    </div>
-                                </div>
-                                <div class="column width-3">
-                                    <div class="widget">
-                                        <h3 class="widget-title mb-30">Social Media</h3>
-                                        {% include social.html %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="row">
-                        <div class="column width-12">
-                            <div class="footer-bottom-inner">
-                                <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Top</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer End -->
         </div>
     </div>
+    <!-- End Wrapper Site -->
 
-    <!-- Js -->
-    <script src="{{ site.url }}/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="{{ site.url }}/assets/js/jquery.tm.avalanche.js"></script>
-    <script src="{{ site.url }}/assets/js/timber.master.min.js"></script>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="footer-inner">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                {% if page.lang == 'en' %}
+                                <h2 class="title">About Me</h2>
+                                <p>I am Arne a software guy based in Dortmund (Germany), specializing in advanced software concepts and consulting services.</p>
+                                {% else %}
+                                <h2 class="title">&Uuml;ber mich</h2>
+                                <p>Ich hei&szlig;e Arne, komme aus Dortmund und bin spezalisiert im Bereich Software Konzepte und Beratung.</p>
+                                {% endif %}
+                            </div>
+                            <div class="col-sm-4">
+                                <h2 class="title">Legal</h2>
+                                {% assign navilist = site.data.settings.footer.en %}
+                                {% if page.lang == 'de' %}
+                                  {% assign navilist = site.data.settings.footer.de %}
+                                {% endif %}
+
+                                {% include navi.html list=navilist %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script src="{{ site.url }}/assets/js/libs/jquery-1.12.4.min.js"></script>
+    <script src="{{ site.url }}/assets/js/libs/jquery.justifiedGallery.min.js"></script>
+    <script src="{{ site.url }}/assets/js/libs/jquery.magnific-popup.js"></script>
+    <script src="{{ site.url }}/assets/js/scripts.js"></script>
+    <!-- End Scripts -->
+
     {% if jekyll.environment == "production" %}
     <script src="{{ site.url }}/assets/js/tracking.js"></script>
     <noscript><img src="https://analytics.gockeln.com/matomo.php?idsite=7&amp;rec=1" style="border:0;" alt="" /></noscript>
