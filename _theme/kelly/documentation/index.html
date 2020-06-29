@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kelly - Minimal Portfolio & Blog HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/SyntaxHighlighter.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					Kelly - Documentation
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div id="masthead">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h1>Kelly</h1>
+						<p class="lead">
+                            Minimal Portfolio & Blog HTML
+						</p>
+					</div>
+					<div class="col-md-3">
+						<p class="well">
+							Created: <span>01/01/2018</span>
+	                        <br/>By: <a href="http://themeforest.net/user/kendythemes" target="_blank">KendyTheme</a>
+	                        <br/>Email: <a href="mailto:kendytheme.ksb@gmail.com">kendytheme.ksb@gmail.com</a>
+	                        <br/>Design: <a href="mailto:kendytheme.ksb@gmail.com">KendyTheme</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<h1 id="welcome"><span class="icon-title"><i class="fa fa-wrench"></i></span> Welcome</h1>
+					<p>Firstly, a huge thanks for purchasing this template, your support is truly appreciated! This document covers the installation and use of this template and often reveals answers to common problems and issues - read this document thoroughly if you are experiencing any difficulties. </p>
+					<h3>Template Features</h3>
+                    <ol>
+                        <li>04 Home Pages</li>
+                        <li>Unlimited Color Presets</li>
+                        <li>Sticky Header</li>
+                        <li>Responsive</li>
+                        <li>404 page, Documentation Detail</li>
+                        <li>Support Google Fonts</li>
+                        <li>Font Awesome Icons</li>
+                        <li>Built in with HTML5, CSS3 & LESS</li>
+                        <li>Cross Browser Compatibility</li>
+                        <li>Well Commented Code</li>
+                        <li>SEO Optimized</li>
+                        <li>Modern Mobile Menu</li>
+                        <li>Easy to customize</li>
+                        <li>and so much more… </li>
+                    </ol>
+                    <p style="margin-left: 20px;">etc...</p>
+
+
+                    <h1 id="installation"><span class="icon-title"><i class="fa fa-wrench"></i></span> Installation</h1>
+                    <p>
+                        After unzip the download pack, you'll found a Template Folder with all the files. <br/>
+
+                        You can view this Template in any browser, you can display or edit the Template without an internet connection. <br/>
+
+                        Now open your FTP Client (like FileZilla) or directly through cpanel, upload the content of the Template on your server root. <br/>
+
+                        Once the files are done uploading go to www.yourdomainname.com/index.html <br/>
+                    </p>
+
+                    <h1 id="html-structure"><span class="icon-title"><i class="fa fa-wrench"></i></span> HTML STRUCTURE</h1>
+
+                    <h3>CSS Structure</h3>
+                    <p>
+                        These are the css files that are loaded into templates in Head section.
+                    </p>
+                    <pre name="code" class="html">
+                        <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.min.css">
+                        <link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">
+                        <link rel="stylesheet" type="text/css" href="css/libs/justifiedGallery.min.css">
+                        <link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
+                        <link rel="stylesheet" type="text/css" href="css/libs/owl.carousel.min.css">
+                        <link rel="stylesheet" type="text/css" href="css/styles.css">
+                    </pre>
+                    <h3>Fonts</h3>
+                    <p>By default, the template loads this font from Google Web Font Services, you can change the font with the one that suits you best.</p>
+                    <pre name="code" class="html">
+                       <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Montserrat:400,600,700%7CLato:400,700' type='text/css' media='all' />
+                    </pre>
+                    <h3>Javascript</h3>
+                    <p>These are the JS files that are loaded into templates in end of the Body Section.</p>
+                    <pre name="code" class="html">
+                        <!-- Scripts -->
+                        <script src="js/libs/jquery-1.12.4.min.js"></script>
+                        <script src="js/libs/jquery.justifiedGallery.min.js"></script>
+                        <script src="js/libs/jquery.magnific-popup.js"></script>
+                        <script src="js/scripts.js"></script>
+                        <!-- End Scripts -->
+                    </pre>
+                    <h1 id="tutorials"><span class="icon-title"><i class="fa fa-wrench"></i></span>Tutorials</h1>
+                    <p>
+                        Lets start updating the template. Open index.html file and follow the steps.
+
+                        Most of the updates are same for all pages. So will explain once here.
+                    </p>
+                    <h3>Header Logo</h3>
+                    <p>Replace your logo image url source</p>
+                    <pre name="code" class="html">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html">Kelly</a>
+                        </div>
+                        <!-- End Logo -->
+                    </pre>
+                    <h3>Menu</h3>
+                    <p>Replace "Brading", "Design", "Identity", "Funiture", "Blog", etc... with the menu name and "#" with the link.</p>
+                    <pre name="code" class="html">
+                        <!-- Navigation -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul class="menu-list">
+                                    <li class="active menu-item-has-children">
+                                        <a href="index.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="index.html">List Layout</a>
+                                            </li>
+                                            <li>
+                                                <a href="index-2.html">Tiled Layout</a>
+                                            </li>
+                                            <li>
+                                                <a href="index-header-text.html">Header Text</a>
+                                            </li>
+                                            <li>
+                                                <a href="index-menu-left.html">Menu Left</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Branding</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Identity</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Furniture</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="blog.html">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="about.html">About Me</a>
+                                            </li>
+                                            <li>
+                                                <a href="single.html">Single</a>
+                                            </li>
+                                            <li>
+                                                <a href="single-project.html">Project</a>
+                                            </li>
+                                            <li>
+                                                <a href="404.html">404 Page</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- End Navigation -->
+                    </pre>
+                    <h3>Footer</h3>
+                    <p>Change copyright and replace socials link for footer section</p>
+                    <pre name="code" class="html">
+                        <div class="socials">
+                            <a href="#" title="Behance">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a href="#" title="Dribbble">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                            <a href="#" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" title="Google Plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#" title="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#" title="Search this site">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="copyright">
+                            <p>
+                                Kelly @ 2018. Design by Kelly
+                            </p>
+                        </div>
+                    </pre>
+                    <h3>Contact Form 7</h3>
+                    <p>To create contact form in contact form 7 like the demo, please use the below template </p>
+                    <pre name="code" class="html">
+                        <!-- Contact Form -->
+                        <form action="#" method="post" class="comment-form contact">
+                            <div class="contact-item form-name">
+                                <input name="author" value="" type="text" placeholder="Your Name *">
+                            </div>
+                            <div class="contact-item form-email">
+                                <input name="email" value="" type="text" placeholder="Your Email *">
+                            </div>
+                            <div class="contact-item form-url">
+                                <input id="url" name="url" value="" type="text" placeholder="Subject">
+                            </div>
+                            <div class="contact-item field-full form-message">
+                                <textarea name="comment" placeholder="Message *"></textarea>
+                            </div>
+                            <div class="contact-item form-submit">
+                                <input name="submit" type="submit" id="submit" class="submit" value="POST Comment">
+                            </div>
+                        </form>
+                        <!-- End Contact Form -->
+                    </pre>
+
+					<h1 id="source-credits"><span class="icon-title"><i class="fa fa-file-text"></i></span> Source Credits</h1>
+
+					<p>
+						Along the project, I've been using the following assets, even if they were images, icons or other files, as listed
+						<ol>
+							<li><a href="https://jquery.com/" target="_blank">jQuery Library Javascript</a></li>
+                            <li><a href="http://masonry.desandro.com/" target="_blank">Library Masonry Javascript</a></li>
+	                        <li><a href="http://owlgraphic.com/owlcarousel/" target="_blank">Owl carousel Plugin Javascript</a></li>
+	                        <li><a href="http://getbootstrap.com/" target="_blank">Icon Font Awesome</a></li>
+	                        <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+						</ol>
+                        <p>& much more...</p>
+					</p>
+                    <p><strong>Images</strong> in live preview are not included to the template. </p>
+                    <ol>
+                        <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                        <li><a href="https://pixabay.com/" target="_blank">Pixabay</a></li>
+                        <li><a href="https://picjumbo.com/" target="_blank">Picjumbo</a></li>
+                    </ol>
+
+					<h1 id="changelog"><span class="icon-title"><i class="fa fa-file-text"></i></span> Changelog</h1>
+					<h1 id="faq"><span class="icon-title"><i class="fa fa-support"></i></span> Frequently Asked Questions</h1>
+					<h1 id="thankyou"><span class="icon-title"><i class="fa fa-thumbs-o-up"></i></span> Thank you!</h1>
+
+					<p>
+						Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template.
+					</p>
+
+				</div>
+				<div class="col-md-3" id="leftCol">
+					<ol id="sidebar" class="nav nav-stacked">
+						<li>
+							<a href="#welcome">Welcome</a>
+						</li>
+                        <li>
+                            <a href="#installation">Installation Template</a>
+                        </li>
+                        <li>
+                            <a href="#html-structure">HTML structure</a>
+                        </li>
+						<li>
+							<a href="#source-credits">Source Credits</a>
+						</li>
+						<li>
+							<a href="#changelog">Changelog</a>
+							
+						</li>
+						<li>
+							<a href="#faq">Frequently Asked Questions</a>
+						</li>
+						<li>
+							<a href="#thankyou">Thank you!</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/shCore.js"></script>
+	<script type="text/javascript" src="js/shBrushCss.js"></script>
+	<script type="text/javascript" src="js/shBrushXml.js"></script>
+	<script type="text/javascript" src="js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type='text/javascript'>
+
+		$(document).ready(function() {
+
+			var header_height = $('#header').height()+8;
+				        
+			$('#sidebar').affix({
+				offset: {
+					top: header_height
+				}
+			});
+			
+			$('.toggle-all').on('click',function() {
+				var icon = $(this).find('i');
+				if(icon.hasClass('fa-arrow-circle-left')) {
+					icon.removeClass('fa-arrow-circle-left').addClass('fa-arrow-circle-right');
+					$('#sidebar').removeClass('all-visible');
+				} else {
+					icon.removeClass('fa-arrow-circle-right').addClass('fa-arrow-circle-left');
+					$('#sidebar').addClass('all-visible');
+				}		
+			});
+				
+			var $body   = $(document.body);
+			var navHeight = $('.navbar').outerHeight(true);
+			
+			$body.scrollspy({
+				target: '#leftCol',
+				offset: navHeight
+			});
+		});
+
+        window.onload = function () {
+            dp.SyntaxHighlighter.ClipboardSwf = '/script/clipboard.swf';
+            dp.SyntaxHighlighter.HighlightAll('code');
+        }
+
+	</script>
+</body>
+</html>
