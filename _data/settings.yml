@@ -17,7 +17,7 @@ mainnav:
     - name: '&Uuml;ber mich'
       url: '/ueber.html'
     - name: 'Blog'
-      url: '/blog.html'
+      url: '/blog/'
       sub:
         - name: 'Trading'
           url: '/blog/trading'
